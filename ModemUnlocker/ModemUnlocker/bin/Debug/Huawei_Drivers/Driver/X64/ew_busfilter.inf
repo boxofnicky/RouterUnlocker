@@ -1,0 +1,160 @@
+;/*++
+;
+;Copyright (c) 2010-2013 Huawei Corporation All rights Reserved
+;
+;Module Name:
+;
+;    BusFilter.INF
+;
+;Abstract:
+;
+;    INF file for installing  bus filter driver with upper 
+;    filter.
+;
+;    
+;
+;--*/
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGuid={36FC9E60-C465-11CF-8056-444553540000}
+Provider=%HUAWEI%
+DriverVer=12/13/2013,1.0.7.0
+CatalogFile=ew_usbenumfilter.cat
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+ew_usbenumfilter.sys  = 1,,
+
+;*****************************************
+; ToasterBus  Install Section
+;*****************************************
+
+[Manufacturer]
+%StdMfg%=Standard, NTamd64
+
+[Standard.NTamd64]
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_156B
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_156C
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_156D
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_156E
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_156F
+
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1506
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1507
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1508
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1509
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_150A
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_150B
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_150C
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_150D
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_150E
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_150F
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_151B
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_151C
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_151D
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_151E
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_151F
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1585
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1586
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1587
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1588
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1589
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1593
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1594
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1595
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1596
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1598
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_159A
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_159C
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_159E
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15A0
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15A2
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15A4
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15A6
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15A8
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15AA
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_14C6
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_14C7
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_14C8
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_14C9
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_14CA
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_14CB
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_14CC
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_14CD
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_14CE
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_14CF
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15B0
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15B1
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15B2
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15B3
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15B4
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15B6
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15B7
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15B8
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15B9
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15BA
+
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15D1
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15D3
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15D5
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15D7
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15D9
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15DB
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15DD
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15DF
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15E1
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15E3
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_1C25
+
+;for logo test                                            
+%BusFilter.DeviceDesc%=Bus_Device, USB\VID_12D1&PID_15FF  
+
+[Bus_Device.NT]
+Include=usb.inf
+Needs=Composite.Dev.NT
+CopyFiles=Drivers_Dir
+
+[Bus_Device.NT.HW]
+AddReg=Bus_Device.NT.HW.AddReg
+
+[Drivers_Dir]
+ew_usbenumfilter.sys
+
+[Bus_Device.NT.HW.AddReg]
+HKR,,DeviceCharacteristics,0x10001,0x0100         ; Use same security checks on relative opens
+HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)"      ; Allow generic-all access to Built-in administrators and Local system 
+HKR,,"UpperFilters",0x00010000,"ew_usbenumfilter"
+
+
+;-------------- Service installation
+; Function and filter driver for the bus
+[Bus_Device.NT.Services]
+Include=usb.inf
+Needs=Composite.Dev.NT.Services
+AddService = ew_usbenumfilter,, busupper_Service_Inst
+
+
+; -------------- busupper Driver install section
+[busupper_Service_Inst]
+DisplayName    = %busupper.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\ew_usbenumfilter.sys
+LoadOrderGroup = PNP Filter
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+HUAWEI = "Huawei"
+StdMfg = "(Standard system devices)"
+DiskId1 = "Bus Installation Disk #1"
+BusFilter.DeviceDesc = "USB Composite Device"
+busupper.SVCDESC = "huawei_CompositeFilter"
+
+

@@ -1,0 +1,81 @@
+<xml>
+    <version>
+        <DriverVersion>HW_1.5.8.0</DriverVersion>
+        <ConfigVersion>1.0.0.0</ConfigVersion>
+    </version>
+
+    <install>
+        <system version="WinXp">
+
+            <inf>
+                 <file desc="SERIAL">
+                        <name>FcSerial.inf</name>
+                        <flag>0</flag>
+                 </file>
+            </inf>
+
+            <sys>
+                 <file desc="SERIAL">
+                        <name>FcSerial.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+            </sys>
+
+            <parameter>
+
+            </parameter>
+
+        </system>
+
+        <system version="WinVista">
+
+            <inf>
+                 <file desc="SERIAL">
+                        <name>FcSerial.inf</name>
+                        <flag>0</flag>
+                 </file>
+            </inf>
+
+            <sys>
+                 <file desc="SERIAL">
+                        <name>FcSerial.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+            </sys>
+
+            <parameter>
+
+            </parameter>
+
+        </system>
+
+        <system version="Win7">
+
+            <inf>
+                 <file desc="SERIAL">
+                        <name>FcSerial.inf</name>
+                        <flag>0</flag>
+                 </file>
+            </inf>
+
+            <sys>
+                 <file desc="SERIAL">
+                        <name>FcSerial.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+            </sys>
+
+            <parameter>
+            </parameter>
+
+        </system>
+
+    </install>
+
+</xml>

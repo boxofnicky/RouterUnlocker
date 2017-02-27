@@ -1,0 +1,72 @@
+;
+; Null Driver for ewsmartcard.sys Smartcard installation x86 and x64 package.
+;
+
+[Version]
+Signature="$Windows NT$"
+Class=SmartCard
+ClassGuid={990A2BD7-E738-46c7-B26F-1CF8FB9F1391}
+Provider=%HUAWEI%
+CatalogFile=ewsmartcard.cat
+DriverVer=01/16/2010,1.0.0.1
+
+[DefaultInstall]
+CopyFiles=System32_CopyFiles
+;AddReg=MiniDriver_AddReg
+ 
+
+[Manufacturer]
+%HUAWEI%=Minidriver,NTamd64,NTamd64.6.1,NTx86,NTx86.6.1
+
+[Minidriver.NTamd64]
+;%CardDeviceName%=Minidriver64_Install,scfilter\CID_8031e073fe2111633f011183079000
+
+[Minidriver.NTx86]
+%CardDeviceName%=Minidriver32_Install,scfilter\CID_8031e073fe2111633f011183079000
+
+[Minidriver.NTamd64.6.1]
+;%CardDeviceName%=Minidriver64_61_Install,scfilter\CID_8031e073fe2111633f011183079000
+
+[Minidriver.NTx86.6.1]
+%CardDeviceName%=Minidriver32_61_Install,scfilter\CID_8031e073fe2111633f011183079000
+
+[SourceDisksFiles]
+ 
+[SourceDisksNames]
+1 = %MediaDescription%
+
+[Minidriver32_Install.NT]
+CopyFiles=System32_CopyFiles
+;AddReg=MiniDriver_AddReg
+ 
+[Minidriver32_61_Install.NT]
+CopyFiles=System32_CopyFiles
+;AddReg=MiniDriver_AddReg
+
+[Minidriver32_61_Install.NT.Services]
+AddService = UMPass, 0x00000002, UMPassService_Install
+ 
+[UMPassService_Install]
+DisplayName    = %umpass.SVCDESC%     ; Friendly Name of the Service
+ServiceType    = 1                    ; SERVICE_KERNEL_DRIVER
+StartType      = 3                    ; SERVICE_DEMAND_START 
+ErrorControl   = 1                    ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\umpass.sys
+LoadOrderGroup = Extended Base
+ 
+[System32_CopyFiles]
+ 
+[DestinationDirs]
+System32_CopyFiles=10,system32
+ 
+[FriendlyName]
+ScFriendlyName="Generic Smart Card"
+
+; =================== Generic ==================================
+
+[Strings]
+HUAWEI ="HUAWEI Incorporated"
+CardDeviceName="Generic Smart Card"
+MediaDescription="Super Card Mini Driver Installation Disk"
+umpass.SVCDESC = "Microsoft UMPass Driver"
+ 

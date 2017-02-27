@@ -1,0 +1,392 @@
+; Copyright (c) 2010-2013 Huawei Incorporated
+; Manufacturer: Huawei Incorporated
+;
+; CDC ECM & NCM driver
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+Provider= %Mfg%
+DriverVer=11/30/2013,2.6.2.3155
+CatalogFile=ew_juwwanecm.cat
+
+[Manufacturer]
+%Mfg% = DeviceList,NTx86,NTamd64
+
+[SourceDisksNames]
+1 = %ew_juwwanecm.DiskName%,,,""
+
+[SourceDisksFiles]
+ew_juwwanecm.sys  = 1,,
+
+; For Win2K
+[DeviceList]
+%PNP21_HW_3G_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_07&wwan
+%PNP21_HW_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_16&wwan
+%PNP21_VDF_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_46&wwan
+%PNP21_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_76&wwan
+
+%TDNCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C17&MI_00&wwan
+%TDNCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C18&MI_00&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C1d&MI_01&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C1E&MI_03&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C1F&MI_02&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C21&MI_03&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C22&MI_02&wwan
+
+
+%PNP21_HW_3G_NetworkDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&Subclass_02&Prot_07&wwan
+%PNP21_HW_NetworkDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&Subclass_02&Prot_11&wwan
+%PNP21_VDF_NetworkDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&Subclass_02&Prot_37&wwan
+%PNP21_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_67&wwan
+
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\COMPAT&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C06&MI_03&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C07&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C09&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0A&MI_02&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0C&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0E&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0F&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C14&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C15&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C16&MI_01&wwan
+
+; ==================Icera Generic PIDs==================
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1444&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1445&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_144E&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_144F&MI_01&wwan
+
+; ==================Icera VDF PIDs==================
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14AE&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14AF&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14B0&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14B1&MI_01&wwan
+
+; ==================Balong VDF PIDs==================
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14A5&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14A6&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14A7&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14D6&MI_01&wwan
+
+;=================WHCK TEST PID=============
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_15E5&MI_00&wwan
+
+; For WinXP and later
+[DeviceList.NTx86]
+
+%PNP21_HW_3G_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_07&wwan
+%PNP21_HW_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_16&wwan
+%PNP21_VDF_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_46&wwan
+%PNP21_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_76&wwan
+
+%TDNCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C17&MI_00&wwan
+%TDNCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C18&MI_00&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C1d&MI_01&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C1E&MI_03&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C1F&MI_02&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C21&MI_03&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C22&MI_02&wwan
+
+
+%PNP21_HW_3G_NetworkDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&Subclass_02&Prot_07&wwan
+%PNP21_HW_NetworkDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&Subclass_02&Prot_11&wwan
+%PNP21_VDF_NetworkDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&Subclass_02&Prot_37&wwan
+%PNP21_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_67&wwan
+
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\COMPAT&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C06&MI_03&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C07&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C09&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0A&MI_02&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0C&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0E&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0F&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C14&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C15&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C16&MI_01&wwan
+
+; ==================Icera Generic PIDs==================
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1444&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1445&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_144E&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_144F&MI_01&wwan
+
+; ==================Icera VDF PIDs==================
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14AE&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14AF&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14B0&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14B1&MI_01&wwan
+
+; ==================Balong VDF PIDs==================
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14A5&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14A6&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14A7&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14D6&MI_01&wwan
+
+;=================WHCK TEST PID=============
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_15E5&MI_00&wwan
+
+; For XP and later x64
+[DeviceList.NTamd64]
+
+%PNP21_HW_3G_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_07&wwan
+%PNP21_HW_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_16&wwan
+%PNP21_VDF_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_46&wwan
+%PNP21_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_76&wwan
+
+%TDNCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C17&MI_00&wwan
+%TDNCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C18&MI_00&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C1d&MI_01&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C1E&MI_03&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C1F&MI_02&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C21&MI_03&wwan
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_1C22&MI_02&wwan
+
+
+%PNP21_HW_3G_NetworkDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&Subclass_02&Prot_07&wwan
+%PNP21_HW_NetworkDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&Subclass_02&Prot_11&wwan
+%PNP21_VDF_NetworkDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&Subclass_02&Prot_37&wwan
+%PNP21_NetworkDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&Subclass_02&Prot_67&wwan
+
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\COMPAT&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C06&MI_03&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C07&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C09&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0A&MI_02&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0C&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0E&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C0F&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C14&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C15&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1C16&MI_01&wwan
+
+; ==================Icera Generic PIDs==================
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1444&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_1445&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_144E&MI_01&wwan
+%ECMDeviceDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_144F&MI_01&wwan
+
+; ==================Icera VDF PIDs==================
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14AE&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14AF&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14B0&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14B1&MI_01&wwan
+
+; ==================Balong VDF PIDs==================
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14A5&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14A6&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14A7&MI_01&wwan
+%VDFECMDesc% = ew_juwwanecm.ndi, USBCDCECM\VID_12D1&PID_14D6&MI_01&wwan
+
+;=================WHCK TEST PID=============
+%NCMDeviceDesc% = ew_juwwanncm.ndi, USBCDCNCM\VID_12D1&PID_15E5&MI_00&wwan
+
+;-------------------------------------------------------------------------------
+; Virtual Ethernet Adapter
+;
+[ew_juwwanecm.ndi]
+*IfType         = 243 ; IF_TYPE_WWANPP
+*MediaType      = 9; NdisMediumWirelessWan
+*PhysicalMediaType = 8 ; NdisPhysicalMediumWirelessWan
+EnableDhcp = 0 ; DHCP Disabled
+Characteristics = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType         = 15 ; if you specify NCF_PHYSICAL, you must specify bustype
+AddReg          = ew_juwwanecm.Reg, ParamsPromiscuous, ParamsFrameType, EcmFlag, FlowControlTimeOut
+CopyFiles       = ew_juwwanecm.CopyFiles
+[ew_juwwanecm.ndi.HW]
+AddReg = ECM_AddReg
+
+[ECM_AddReg]
+HKR,,"Platform",0x00010001,0x1 
+HKR,,"WWAN",0x00010001,0x1
+
+[ew_juwwanecm.ndi.Services]
+AddService      = %ServiceName%, 2, ew_juwwanecm.Service, ew_juwwanecm.EventLog
+
+[ew_juwwanncm.ndi]
+*IfType         = 243 ; IF_TYPE_WWANPP
+*MediaType      = 9; NdisMediumWirelessWan
+*PhysicalMediaType = 8 ; NdisPhysicalMediumWirelessWan
+EnableDhcp = 0 ; DHCP Disabled
+Characteristics = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType         = 15 ; if you specify NCF_PHYSICAL, you must specify bustype
+AddReg          = ew_juwwanecm.Reg, ParamsPromiscuous, ParamsFrameType, NcmFlag, ParamsPacketsAccumulationTimeout, ParamsMaxNumOfDatagramsInNTB,FlowControlTimeOut
+CopyFiles       = ew_juwwanecm.CopyFiles
+
+[ew_juwwanncm.ndi.Services]
+AddService      = %ServiceName%, 2, ew_juwwanecm.Service, ew_juwwanecm.EventLog
+
+[ew_juwwanncm.ndi.HW]
+AddReg = ECM_AddReg
+
+;-----------------------------------------------------------------------------
+;
+[ew_juwwanecm.Reg]
+HKR,    ,                         BusNumber,           0, "0"
+HKR, Ndi,                         Service,             0, "huawei_wwanecm"
+HKR, Ndi\Interfaces,              UpperRange,          0, "flpp4" and "flpp6"
+HKR, Ndi\Interfaces,              LowerRange,          0, "ppip"
+
+[ParamsPromiscuous]
+;
+;    Should the physical NIC be set to Promiscuous mode
+;
+HKR, Ndi\Params\Promiscuous,     ParamDesc, , %Promiscuous%
+HKR, Ndi\Params\Promiscuous,     Default,  ,"0"
+HKR, Ndi\Params\Promiscuous,     type, ,      enum
+HKR, Ndi\Params\Promiscuous\enum,"1",  ,     %Promiscuous_Enable%
+HKR, Ndi\Params\Promiscuous\enum,"0",  ,     %Promiscuous_Disable%
+
+[ParamsFrameType]
+HKR, Ndi\Params\FrameType,     ParamDesc, 0, %FrameType%
+HKR, Ndi\Params\FrameType,     type,      0, enum
+HKR, Ndi\Params\FrameType,     Default,   0, "0"
+HKR, Ndi\Params\FrameType\enum,"1",       0, %FrameType_IP%
+HKR, Ndi\Params\FrameType\enum,"0",       0, %FrameType_Ethernet%
+
+[ParamsIsNtb32]
+HKR, Ndi\Params\IsNtb32,      ParamDesc, , %IsNtb32%
+HKR, Ndi\Params\IsNtb32,      Default, , "1"
+HKR, Ndi\Params\IsNtb32,      type, , enum
+HKR, Ndi\Params\IsNtb32\enum, "1", , "Yes"
+HKR, Ndi\Params\IsNtb32\enum, "0", , "No"
+
+[ParamsNTBInputSize]
+HKR, Ndi\Params\NTBInputSize,     ParamDesc, , %NTBInputSize%
+; If the following size is larger than the maximum allowed by the device, the
+; maximum value is used. 0 means to use the maximum allowed value of the device.
+HKR, Ndi\Params\NTBInputSize,     Default, , "0"
+HKR, Ndi\Params\NTBInputSize,     type, , dword
+
+[ParamsPacketsAccumulationTimeout]
+HKR, Ndi\Params\PacketsAccumulationTimeout,     ParamDesc, , %PacketsAccumulationTimeout%
+; Unit of PacketsAccumulationTimeout is usecs. Default value is 20 us.
+HKR, Ndi\Params\PacketsAccumulationTimeout,     Default, , "20"
+HKR, Ndi\Params\PacketsAccumulationTimeout,     type, , dword
+
+[ParamsMaxNumOfDatagramsInNTB]
+HKR, Ndi\Params\MaxNumOfDatagramsInNTB,     ParamDesc, , %MaxNumOfDatagramsInNTB%
+HKR, Ndi\Params\MaxNumOfDatagramsInNTB,     Default, , "64"
+HKR, Ndi\Params\MaxNumOfDatagramsInNTB,     type, , dword
+
+[FlowControlTimeOut]
+HKR, Ndi\Params\FlowControlTimeOut,     ParamDesc, , %FlowControlTimeout%
+HKR, Ndi\Params\FlowControlTimeOut,     Default, , "2800"
+HKR, Ndi\Params\FlowControlTimeOut,     type, , dword
+
+[NcmFlag]
+HKR, Ndi\Params\NcmFlag,     ParamDesc, , %NcmFlagDesc%
+HKR, Ndi\Params\NcmFlag,     Default, , "1"
+HKR, Ndi\Params\NcmFlag,     type, , dword
+
+[EcmFlag]
+HKR, Ndi\Params\NcmFlag,     ParamDesc, , %NcmFlagDesc%
+HKR, Ndi\Params\NcmFlag,     Default, , "0"
+HKR, Ndi\Params\NcmFlag,     type, , dword
+
+
+;-----------------------------------------------------------------------------
+; DestinationDirs
+;
+[DestinationDirs]
+ew_juwwanecm.CopyFiles = 12
+
+[ew_juwwanecm.CopyFiles]
+ew_juwwanecm.sys,,,0x6  ;COPYFLG_NOSKIP | COPYFLG_NOVERSIONCHECK
+;-----------------------------------------------------------------------------
+; Driver and Service Section
+;
+
+[ew_juwwanecm.Service]
+ServiceType     = 1 ;%SERVICE_KERNEL_DRIVER%
+StartType       = 3 ;%SERVICE_DEMAND_START%
+ErrorControl    = 1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary   = %12%\ew_juwwanecm.sys
+LoadOrderGroup  = NDIS
+AddReg          = ew_juwwanecm.Service.Reg
+
+[ew_juwwanecm.Service.Reg]
+HKR, , TextModeFlags,    0x00010001, 0x0001
+HKR, Parameters, DebugLevel, 0x00010001, 1
+HKR, Parameters, WwanLogoTestOn, 0x00010001, 0
+
+[ew_juwwanecm.EventLog]
+AddReg = ew_juwwanecm.AddEventLog.Reg
+
+[ew_juwwanecm.AddEventLog.Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported,   0x00010001, 7
+
+;
+;--- ew_juwwanecm.ndi WDF Coinstaller installation ------
+;
+;[DestinationDirs]
+;cdcecm_CoInstaller_CopyFiles = 11
+
+;[ew_juwwanncm.ndi.CoInstallers]
+;AddReg=cdcecm_CoInstaller_AddReg
+;CopyFiles=cdcecm_CoInstaller_CopyFiles
+
+;[ew_juwwanecm.ndi.CoInstallers]
+;AddReg=cdcecm_CoInstaller_AddReg
+;CopyFiles=cdcecm_CoInstaller_CopyFiles
+
+;[cdcecm_CoInstaller_AddReg]
+;HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01009.dll,WdfCoInstaller"
+
+;[cdcecm_CoInstaller_CopyFiles]
+;wdfcoinstaller01009.dll
+
+;[SourceDisksFiles]
+;wdfcoinstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[ew_juwwanncm.ndi.Wdf]
+KmdfService = %ServiceName%, cdcecm_wdfsect
+
+[ew_juwwanecm.ndi.Wdf]
+KmdfService = %ServiceName%, cdcecm_wdfsect
+
+[cdcecm_wdfsect]
+KmdfLibraryVersion = 1.9
+
+;-----------------------------------------------------------------------------
+; Localizable Strings
+;
+[Strings]
+Mfg = "HUAWEI"
+ECMDeviceDesc = "HUAWEI Mobile Connect - Network Adapter"
+NewECMDeviceDesc = "Mobile Connect - Network Adapter"
+VDFECMDesc    = "Vodafone Mobile Broadband Network Adapter (Huawei)"
+TDECMDeviceDesc = "HUAWEI Mobile CMCC Connect - Network Adapter"
+
+NCMDeviceDesc = "HUAWEI Mobile Connect - Network Adapter"
+NewNCMDeviceDesc = "Mobile Connect - Network Adapter"
+VDFNCMDesc    = "Vodafone Mobile Broadband Network Adapter (Huawei)"
+TDNCMDeviceDesc = "HUAWEI Mobile CMCC Connect - Network Adapter"
+
+;PNP2.1 Device descriptor
+PNP21_HW_3G_NetworkDesc = "HUAWEI Mobile Connect - 3G Network Card"
+PNP21_HW_NetworkDesc = "HUAWEI Mobile Connect - Network Card"
+PNP21_NetworkDesc = "Mobile Connect - Network Card"
+PNP21_VDF_NetworkDesc = "Vodafone Mobile Broadband Network Adapter (Huawei)"
+
+
+ew_juwwanecm.DiskName = "DriverCore Installation Disk"
+Promiscuous = "Set the physical NIC to promiscuous mode"
+Promiscuous_Disable = "Disable"
+ServiceName = "huawei_wwanecm"
+Promiscuous_Enable  = "Enable"
+FrameType = "Frame Type in driver-device communications"
+FrameType_Ethernet = "Ethernet"
+FrameType_IP  = "IP"
+
+IsNtb32 = "32bit mode"
+NTBInputSize = "NTB input size"
+PacketsAccumulationTimeout = "Packets Accumulation Timeout [usec]"
+MaxNumOfDatagramsInNTB = "Maximum number of datagrams in NTB"
+FlowControlTimeout = "Flow Control timeout interval in ms"
+NcmFlagDesc = "Flag use to distinguish ncm or ecm"

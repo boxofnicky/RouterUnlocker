@@ -1,0 +1,242 @@
+system log:
+------------------------------------------------------------------
+Drivers database..query results:
+------------------------------------------------------------------
+Local Print Queue
+Local Print Queue
+Local Print Queue
+Local Print Queue
+Microsoft ISATAP Adapter
+Microsoft Teredo Tunneling Adapter
+Microsoft ISATAP Adapter
+Generic software device
+Generic software device
+Generic software device
+Generic software device
+Generic software device
+Generic software device
+Remote Desktop Device Redirector Bus
+Virtual Serial Bus Enumerator
+Virtual Serial Port 8 (Eltima Software)
+Virtual Serial Port 8 (Eltima Software)
+Virtual Serial Bus Enumerator 8 (Eltima Software)
+CD-ROM Drive
+DAEMON Tools Virtual Bus
+Plug and Play Software Device Enumerator
+Standard 56000 bps Modem
+Microsoft System Management BIOS Driver
+NDIS Virtual Network Adapter Enumerator
+HUAWEI Mobile Connect - Bus Enumerate Device
+Microsoft RemoteFX Synth3D VSP Driver
+Microsoft Visual Studio Location Simulator Sensor
+Microsoft Hyper-V Virtual Disk Server
+Microsoft Basic Render Driver
+Microsoft Hyper-V PCI Server
+ACPI Fixed Feature Button
+Motherboard resources
+System board
+ACPI Thermal Zone
+Intel Processor
+Intel Processor
+Intel Processor
+Intel Processor
+Microsoft Windows Management Interface for ACPI
+HP Mobile Data Protection Sensor
+Microsoft AC Adapter
+Microsoft ACPI-Compliant Control Method Battery
+ACPI Power Button
+Motherboard resources
+Synaptics SMBus Driver
+CD-ROM Drive
+Disk drive
+Standard SATA AHCI Controller
+Synaptics PS/2 Port TouchPad
+Standard PS/2 Keyboard
+Motherboard resources
+System timer
+System CMOS/real time clock
+Motherboard resources
+Numeric data processor
+Programmable interrupt controller
+High precision event timer
+Legacy device
+Direct memory access controller
+ACPI Lid
+Microsoft ACPI-Compliant Embedded Controller
+Intel(R) HM65 Express Chipset Family LPC Interface Controller - 1C49
+Bluetooth Device (Personal Area Network)
+Bluetooth Device
+Device Identification Service
+Bluetooth Audio/Video Remote Control HID
+AV Remote Target Service
+Bluetooth Stereo
+Microsoft Bluetooth Enumerator
+Bluetooth Device (RFCOMM Protocol TDI)
+Generic Bluetooth Adapter
+HID-compliant mouse
+USB Input Device
+HID-compliant system controller
+HID-compliant consumer control device
+USB Input Device
+HID Keyboard Device
+USB Input Device
+USB Composite Device
+Generic USB Hub
+USB Root Hub
+Intel(R) 6 Series/C200 Series Chipset Family USB Enhanced Host Controller - 1C26
+USB Root Hub (xHCI)
+USB xHCI Compliant Host Controller
+Intel(R) 6 Series/C200 Series Chipset Family PCI Express Root Port 4 - 1C16
+Realtek PCIE CardReader
+Intel(R) 6 Series/C200 Series Chipset Family PCI Express Root Port 3 - 1C14
+Microsoft Wi-Fi Direct Virtual Adapter
+Microsoft Hosted Network Virtual Adapter
+Broadcom 802.11n Network Adapter
+Intel(R) 6 Series/C200 Series Chipset Family PCI Express Root Port 2 - 1C12
+Realtek PCIe GBE Family Controller
+Intel(R) 6 Series/C200 Series Chipset Family PCI Express Root Port 1 - 1C10
+High Definition Audio Device
+Audio Endpoint
+Audio Endpoint
+High Definition Audio Device
+High Definition Audio Controller
+Validity Sensors (WBF) (PID=0018)
+Generic USB Hub
+USB Root Hub
+Intel(R) 6 Series/C200 Series Chipset Family USB Enhanced Host Controller - 1C2D
+Intel(R) Management Engine Interface 
+Generic PnP Monitor
+S230HL
+Intel(R) HD Graphics 3000
+AMD Radeon HD 7400M Series
+2nd generation Intel(R) Core(TM) processor family PCI Express Controller - 0101
+2nd generation Intel(R) Core(TM) processor family DRAM Controller - 0104
+PCI Express Root Complex
+Microsoft ACPI-Compliant System
+ACPI x64-based PC
+Remote Desktop USB Hub
+UMBus Enumerator
+UMBus Enumerator
+UMBus Enumerator
+UMBus Root Bus Enumerator
+Microsoft Kernel Debug Network Adapter
+Microsoft Storage Spaces Controller
+Microsoft Virtual Drive Enumerator
+Composite Bus Enumerator
+Microsoft Hyper-V Virtualization Infrastructure Driver
+VirtualBox Host-Only Ethernet Adapter
+Microsoft Basic Display Driver
+Microsoft Hyper-V Virtual Machine Bus Provider
+Volume
+Volume
+Volume
+Volume
+Volume Manager
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------
+All detected ports.
+------------------------------------------------------------------
+COM1
+COM2
+
+
+Serial port data
+
+
+------------------------------------------------------------------
+Connected Modems:
+AnswerMode: 
+AttachedTo: COM3
+Availability: 
+BlindOff: X4
+BlindOn: X3
+Caption: Standard 56000 bps Modem
+CompatibilityFlags: 
+CompressionInfo: 
+CompressionOff: %C
+CompressionOn: %C3
+ConfigManagerErrorCode: 0
+ConfigManagerUserConfig: False
+ConfigurationDialog: modemui.dll
+CountriesSupported: 
+CountrySelected: 
+CreationClassName: Win32_PotsModem
+CurrentPasswords: 
+DCB: 
+Default: 
+Description: Standard 56000 bps Modem
+DeviceID: ROOT\MODEM\0000
+DeviceLoader: 
+DeviceType: External Modem
+DialType: 
+DriverDate: 20021001******.******+***
+ErrorCleared: 
+ErrorControlForced: \N2
+ErrorControlInfo: 
+ErrorControlOff: \N
+ErrorControlOn: \N3
+ErrorDescription: 
+FlowControlHard: &K3
+FlowControlOff: &K
+FlowControlSoft: &K4
+InactivityScale: "0a000000"
+InactivityTimeout: 0
+Index: 0
+IndexEx: 0000
+InstallDate: 
+LastErrorCode: 
+MaxBaudRateToPhone: 56000
+MaxBaudRateToSerialPort: 115200
+MaxNumberOfPasswords: 
+Model: Standard 56000 bps Modem
+ModemInfPath: oem48.inf
+ModemInfSection: Gen556F
+ModulationBell: B1
+ModulationCCITT: B
+ModulationScheme: 
+Name: Standard 56000 bps Modem
+PNPDeviceID: ROOT\MODEM\0000
+PortSubClass: "02"
+PowerManagementCapabilities: 
+PowerManagementSupported: False
+Prefix: AT
+Properties: 
+ProviderName: Microsoft
+Pulse: P
+Reset: AT&F<cr>
+ResponsesKeyName: Standard 56000 bps Modem::(Standard Modem Types)::Microsoft
+RingsBeforeAnswer: 
+SpeakerModeDial: M1
+SpeakerModeOff: M0
+SpeakerModeOn: M2
+SpeakerModeSetup: M3
+SpeakerVolumeHigh: L3
+SpeakerVolumeInfo: 
+SpeakerVolumeLow: L0
+SpeakerVolumeMed: L2
+Status: OK
+StatusInfo: 3
+StringFormat: UNICODE string format
+SupportsCallback: 
+SupportsSynchronousConnect: 
+SystemCreationClassName: Win32_ComputerSystem
+SystemName: NICKY
+Terminator: <cr>
+TimeOfLastReset: 
+Tone: T
+VoiceSwitchFeature: 
+
+------------------------------------------------------------------
+------------------------------------------------------------------Modem to serial port data
+
+
+------------------------------------------------------------------

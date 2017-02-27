@@ -1,0 +1,476 @@
+; Copyright (c) 2010,2011 Huawei Incorporated
+; Manufacturer: Huawei Incorporated
+; 
+;
+; HUAWEI Technologies CO.,LTD huawei_cdcacm Virtual Serial Port
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%Mfg%
+DriverVer=04/03/2014,1.0.13.0
+CatalogFile=ew_cdcacm.cat
+
+; ================= Device Install section =====================
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%Mfg%=DeviceList,NTx86,NTamd64
+
+[SourceDisksFiles]
+ew_cdcacm.sys=1
+
+[SourceDisksNames]
+; diskid = disk-description[,[tag-or-cab-file],[unused,path][,flags]]
+1=%Disk_Description%,
+
+[DestinationDirs]
+DefaultDestDir=12
+
+; Windows 2000
+[DeviceList]
+; GENERAL ACM PORT(WITH "HUAWEI" string)
+%HUAWEI_3GDIAGDeviceDesc%      = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_03
+%HUAWEI_3GPCUIDeviceDesc%      = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_02
+%HUAWEI_3GGPSDeviceDesc%       = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_05
+%HUAWEI_ControlDeviceDesc%     = CTRL_DevInstall, USB\VID_12D1&Subclass_03&Prot_06	
+%HUAWEI_BTDeviceDesc%          = BT_DevInstall, USB\VID_12D1&Subclass_03&Prot_0A
+%HUAWEI_FingerPintDesc%        = FP_DevInstall, USB\VID_12D1&Subclass_03&Prot_0B
+%HUAWEI_3GPCVoiceDeviceDesc%   = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_0E
+
+%HUAWEI_PCUIDeviceDesc%        = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_12
+%HUAWEI_DIAGDeviceDesc%        = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_13
+%HUAWEI_GPSDeviceDesc%         = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_14
+%HUAWEI_PCVoiceDeviceDesc%     = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_15
+
+
+%HUAWEI_ShellADeviceDesc%      = SHELL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_18
+%HUAWEI_ShellBDeviceDesc%      = SHELL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_19
+%HUAWEI_SerialADeviceDesc%     = SERIAL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_1A
+%HUAWEI_SerialBDeviceDesc%     = SERIAL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_1B
+%HUAWEI_SerialCDeviceDesc%     = SERIAL_C_DevInstall, USB\VID_12D1&Subclass_03&Prot_1C
+
+
+; VDF ACM PORT
+%VDF_3GPCUIDeviceDesc%         = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_32
+%VDF_3GDIAGDeviceDesc%         = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_33
+%VDF_3GGPSDeviceDesc%          = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_35
+%VDF_3GCtrlDeviceDesc%         = CTRL_DevInstall, USB\VID_12D1&Subclass_03&Prot_36 
+%VDF_3GBTDeviceDesc%           = BT_DevInstall, USB\VID_12D1&Subclass_03&Prot_3A
+%VDF_3GFingerPrint%            = FP_DevInstall, USB\VID_12D1&Subclass_03&Prot_3B
+%VDF_3GPCVoiceDeviceDesc%      = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_3E
+
+%VDF_ShellADeviceDesc%         = SHELL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_48
+%VDF_ShellBDeviceDesc%         = SHELL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_49
+%VDF_SerialADeviceDesc%        = SERIAL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_4A
+%VDF_SerialBDeviceDesc%        = SERIAL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_4B
+%VDF_SerialCDeviceDesc%        = SERIAL_C_DevInstall, USB\VID_12D1&Subclass_03&Prot_4C
+
+; CUSTOMIZE ACM PORT (WITHOUT "HUAWEI" string)
+%PCUIDeviceDesc%               = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_62
+%DIAGDeviceDesc%               = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_63
+%GPSDeviceDesc%                = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_65
+%ControlDeviceDesc%            = CTRL_DevInstall, USB\VID_12D1&Subclass_03&Prot_66
+%BTDeviceDesc%                 = BT_DevInstall, USB\VID_12D1&Subclass_03&Prot_6A
+%FingerPintDesc%               = FP_DevInstall, USB\VID_12D1&Subclass_03&Prot_6B
+%PCVoiceDeviceDesc%            = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_6E
+
+%3GPCUIDeviceDesc%             = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_72
+%3GDIAGDeviceDesc%             = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_73
+%3GGPSDeviceDesc%              = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_74
+%3GPCVoiceDeviceDesc%          = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_75
+
+%ShellADeviceDesc%             = SHELL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_78
+%ShellBDeviceDesc%             = SHELL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_79
+%SerialADeviceDesc%            = SERIAL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_7A
+%SerialBDeviceDesc%            = SERIAL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_7B
+%SerialCDeviceDesc%            = SERIAL_C_DevInstall, USB\VID_12D1&Subclass_03&Prot_7C
+
+; for logo test
+%HUAWEI_3GPCUIDeviceDesc%      = PCUI_DevInstall, USB\VID_12D1&PID_158F&MI_01
+%HUAWEI_3GDIAGDeviceDesc%      = DIAG_DevInstall, USB\VID_12D1&PID_158F&MI_02
+
+; Windows XP and later
+[DeviceList.NTx86]
+;PNP2.1 PORT INFO
+; GENERAL ACM PORT(WITH "HUAWEI" string)
+%HUAWEI_3GDIAGDeviceDesc%      = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_03
+%HUAWEI_3GPCUIDeviceDesc%      = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_02
+%HUAWEI_3GGPSDeviceDesc%       = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_05
+%HUAWEI_ControlDeviceDesc%     = CTRL_DevInstall, USB\VID_12D1&Subclass_03&Prot_06	
+%HUAWEI_BTDeviceDesc%          = BT_DevInstall, USB\VID_12D1&Subclass_03&Prot_0A
+%HUAWEI_FingerPintDesc%        = FP_DevInstall, USB\VID_12D1&Subclass_03&Prot_0B
+%HUAWEI_3GPCVoiceDeviceDesc%   = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_0E
+
+%HUAWEI_PCUIDeviceDesc%        = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_12
+%HUAWEI_DIAGDeviceDesc%        = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_13
+%HUAWEI_GPSDeviceDesc%         = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_14
+%HUAWEI_PCVoiceDeviceDesc%     = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_15
+
+
+%HUAWEI_ShellADeviceDesc%      = SHELL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_18
+%HUAWEI_ShellBDeviceDesc%      = SHELL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_19
+%HUAWEI_SerialADeviceDesc%     = SERIAL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_1A
+%HUAWEI_SerialBDeviceDesc%     = SERIAL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_1B
+%HUAWEI_SerialCDeviceDesc%     = SERIAL_C_DevInstall, USB\VID_12D1&Subclass_03&Prot_1C
+
+
+; VDF ACM PORT
+%VDF_3GPCUIDeviceDesc%         = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_32
+%VDF_3GDIAGDeviceDesc%         = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_33
+%VDF_3GGPSDeviceDesc%          = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_35
+%VDF_3GCtrlDeviceDesc%         = CTRL_DevInstall, USB\VID_12D1&Subclass_03&Prot_36 
+%VDF_3GBTDeviceDesc%           = BT_DevInstall, USB\VID_12D1&Subclass_03&Prot_3A
+%VDF_3GFingerPrint%            = FP_DevInstall, USB\VID_12D1&Subclass_03&Prot_3B
+%VDF_3GPCVoiceDeviceDesc%      = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_3E
+
+%VDF_ShellADeviceDesc%         = SHELL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_48
+%VDF_ShellBDeviceDesc%         = SHELL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_49
+%VDF_SerialADeviceDesc%        = SERIAL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_4A
+%VDF_SerialBDeviceDesc%        = SERIAL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_4B
+%VDF_SerialCDeviceDesc%        = SERIAL_C_DevInstall, USB\VID_12D1&Subclass_03&Prot_4C
+
+; CUSTOMIZE ACM PORT (WITHOUT "HUAWEI" string)
+%PCUIDeviceDesc%               = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_62
+%DIAGDeviceDesc%               = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_63
+%GPSDeviceDesc%                = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_65
+%ControlDeviceDesc%            = CTRL_DevInstall, USB\VID_12D1&Subclass_03&Prot_66
+%BTDeviceDesc%                 = BT_DevInstall, USB\VID_12D1&Subclass_03&Prot_6A
+%FingerPintDesc%               = FP_DevInstall, USB\VID_12D1&Subclass_03&Prot_6B
+%PCVoiceDeviceDesc%            = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_6E
+
+%3GPCUIDeviceDesc%             = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_72
+%3GDIAGDeviceDesc%             = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_73
+%3GGPSDeviceDesc%              = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_74
+%3GPCVoiceDeviceDesc%          = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_75
+
+%ShellADeviceDesc%             = SHELL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_78
+%ShellBDeviceDesc%             = SHELL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_79
+%SerialADeviceDesc%            = SERIAL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_7A
+%SerialBDeviceDesc%            = SERIAL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_7B
+%SerialCDeviceDesc%            = SERIAL_C_DevInstall, USB\VID_12D1&Subclass_03&Prot_7C
+
+; for logo test
+%HUAWEI_3GPCUIDeviceDesc%      = PCUI_DevInstall, USB\VID_12D1&PID_158F&MI_01
+%HUAWEI_3GDIAGDeviceDesc%      = DIAG_DevInstall, USB\VID_12D1&PID_158F&MI_02
+
+; For XP and later x64
+[DeviceList.NTamd64]
+; GENERAL ACM PORT(WITH "HUAWEI" string)
+%HUAWEI_3GDIAGDeviceDesc%      = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_03
+%HUAWEI_3GPCUIDeviceDesc%      = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_02
+%HUAWEI_3GGPSDeviceDesc%       = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_05
+%HUAWEI_ControlDeviceDesc%     = CTRL_DevInstall, USB\VID_12D1&Subclass_03&Prot_06	
+%HUAWEI_BTDeviceDesc%          = BT_DevInstall, USB\VID_12D1&Subclass_03&Prot_0A
+%HUAWEI_FingerPintDesc%        = FP_DevInstall, USB\VID_12D1&Subclass_03&Prot_0B
+%HUAWEI_3GPCVoiceDeviceDesc%   = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_0E
+
+%HUAWEI_PCUIDeviceDesc%        = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_12
+%HUAWEI_DIAGDeviceDesc%        = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_13
+%HUAWEI_GPSDeviceDesc%         = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_14
+%HUAWEI_PCVoiceDeviceDesc%     = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_15
+
+
+%HUAWEI_ShellADeviceDesc%      = SHELL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_18
+%HUAWEI_ShellBDeviceDesc%      = SHELL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_19
+%HUAWEI_SerialADeviceDesc%     = SERIAL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_1A
+%HUAWEI_SerialBDeviceDesc%     = SERIAL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_1B
+%HUAWEI_SerialCDeviceDesc%     = SERIAL_C_DevInstall, USB\VID_12D1&Subclass_03&Prot_1C
+
+
+; VDF ACM PORT
+%VDF_3GPCUIDeviceDesc%         = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_32
+%VDF_3GDIAGDeviceDesc%         = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_33
+%VDF_3GGPSDeviceDesc%          = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_35
+%VDF_3GCtrlDeviceDesc%         = CTRL_DevInstall, USB\VID_12D1&Subclass_03&Prot_36 
+%VDF_3GBTDeviceDesc%           = BT_DevInstall, USB\VID_12D1&Subclass_03&Prot_3A
+%VDF_3GFingerPrint%            = FP_DevInstall, USB\VID_12D1&Subclass_03&Prot_3B
+%VDF_3GPCVoiceDeviceDesc%      = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_3E
+
+%VDF_ShellADeviceDesc%         = SHELL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_48
+%VDF_ShellBDeviceDesc%         = SHELL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_49
+%VDF_SerialADeviceDesc%        = SERIAL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_4A
+%VDF_SerialBDeviceDesc%        = SERIAL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_4B
+%VDF_SerialCDeviceDesc%        = SERIAL_C_DevInstall, USB\VID_12D1&Subclass_03&Prot_4C
+
+; CUSTOMIZE ACM PORT (WITHOUT "HUAWEI" string)
+%PCUIDeviceDesc%               = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_62
+%DIAGDeviceDesc%               = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_63
+%GPSDeviceDesc%                = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_65
+%ControlDeviceDesc%            = CTRL_DevInstall, USB\VID_12D1&Subclass_03&Prot_66
+%BTDeviceDesc%                 = BT_DevInstall, USB\VID_12D1&Subclass_03&Prot_6A
+%FingerPintDesc%               = FP_DevInstall, USB\VID_12D1&Subclass_03&Prot_6B
+%PCVoiceDeviceDesc%            = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_6E
+
+%3GPCUIDeviceDesc%             = PCUI_DevInstall, USB\VID_12D1&Subclass_03&Prot_72
+%3GDIAGDeviceDesc%             = DIAG_DevInstall, USB\VID_12D1&Subclass_03&Prot_73
+%3GGPSDeviceDesc%              = GPS_DevInstall, USB\VID_12D1&Subclass_03&Prot_74
+%3GPCVoiceDeviceDesc%          = PCVOICE_DevInstall, USB\VID_12D1&Subclass_03&Prot_75
+
+%ShellADeviceDesc%             = SHELL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_78
+%ShellBDeviceDesc%             = SHELL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_79
+%SerialADeviceDesc%            = SERIAL_A_DevInstall, USB\VID_12D1&Subclass_03&Prot_7A
+%SerialBDeviceDesc%            = SERIAL_B_DevInstall, USB\VID_12D1&Subclass_03&Prot_7B
+%SerialCDeviceDesc%            = SERIAL_C_DevInstall, USB\VID_12D1&Subclass_03&Prot_7C
+
+; for logo test
+%HUAWEI_3GPCUIDeviceDesc%      = PCUI_DevInstall, USB\VID_12D1&PID_158F&MI_01
+%HUAWEI_3GDIAGDeviceDesc%      = DIAG_DevInstall, USB\VID_12D1&PID_158F&MI_02
+
+[DIAG_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, DIAG_Identify_AddReg
+
+[PCUI_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, PCUI_Identify_AddReg
+
+[CTRL_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, CTRL_Identify_AddReg
+
+[BT_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, BT_Identify_AddReg
+
+[FP_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, FP_Identify_AddReg
+
+[PCVOICE_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, PCVOICE_Identify_AddReg
+
+[GPS_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, GPS_Identify_AddReg
+
+[SHELL_A_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, SHELL_A_Identify_AddReg
+
+[SHELL_B_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, SHELL_B_Identify_AddReg
+
+[SERIAL_A_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, SERIAL_A_Identify_AddReg
+
+[SERIAL_B_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, SERIAL_B_Identify_AddReg
+
+[SERIAL_C_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, SERIAL_C_Identify_AddReg
+
+[DevInstall_CopyFiles]
+ew_cdcacm.sys,,,0x6    ; COPYFLG_NOSKIP | COPYFLG_NOVERSIONCHECK
+
+[DIAG_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[PCUI_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[CTRL_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[BT_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[FP_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[PCVOICE_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[GPS_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[SHELL_A_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[SHELL_B_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[SERIAL_A_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[SERIAL_B_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[SERIAL_C_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[DevInstall_AddService]
+ServiceType   = 1                  ; SERVICE_KERNEL_DRIVER
+StartType     = 3                  ; SERVICE_DEMAND_START
+ErrorControl  = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary = %12%\ew_cdcacm.sys
+Addreg = DevInstall_AddService_Addreg
+
+[DevInstall_AddService_Addreg]
+HKR, Parameters, DebugLevel, 0x00010001, 1
+HKR, Parameters, DebugPrintCom, 0x00010001, 0
+HKR, Parameters, ControlMask, 0x00010001, 0x00000001
+
+[DIAG_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[PCUI_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[CTRL_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[BT_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[FP_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[PCVOICE_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[GPS_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[SHELL_A_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[SHELL_B_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[SERIAL_A_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[SERIAL_B_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[SERIAL_C_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[DevInstall_NT_HW_AddReg]
+HKR,, "ReadBufferSize", 0x00010001, 0x1000 
+HKR,, "ReadBufferNumber", 0x00010001, 0x40
+HKR,, "MaxOutputTransferSize", 0x00010001, 0x1000
+HKR,, "ControlReuqestNumber", 0x00010001, 0x40
+HKR,, "DataRequestNumber", 0x00010001, 0x40
+HKR,, "SelectiveSuspendIdleTime", 0x00010001, 0x05
+
+;-------------- Add standard properties page (displayed in Device Manager)
+[DevInstall_AddReg]
+HKR,,PortSubClass,1,01 ; "01" stands for serial port
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[DIAG_Identify_AddReg]
+HKR,,PortIdentify,,HWDIAG 
+
+[PCUI_Identify_AddReg]
+HKR,,PortIdentify,,HWPCUI 
+
+[CTRL_Identify_AddReg]
+HKR,,PortIdentify,,HWCONTROL 
+
+[BT_Identify_AddReg]
+HKR,,PortIdentify,,HWBLUETOOTH 
+
+[FP_Identify_AddReg]
+HKR,,PortIdentify,,HWFINGERPRINT 
+
+[PCVOICE_Identify_AddReg]
+HKR,,PortIdentify,,HWPCVOICE 
+
+[GPS_Identify_AddReg]
+HKR,,PortIdentify,,HWGPS 
+
+[SHELL_A_Identify_AddReg]
+HKR,,PortIdentify,,HWSHELLA 
+
+[SHELL_B_Identify_AddReg]
+HKR,,PortIdentify,,HWSHELLB 
+
+[SERIAL_A_Identify_AddReg]
+HKR,,PortIdentify,,HWSERIALA 
+
+[SERIAL_B_Identify_AddReg]
+HKR,,PortIdentify,,HWSERIALB 
+
+[SERIAL_C_Identify_AddReg]
+HKR,,PortIdentify,,HWSERIALC 
+
+[Strings]
+HUAWEI_ShellADeviceDesc     = "HUAWEI Mobile Broadband - ShellA"
+HUAWEI_ShellBDeviceDesc     = "HUAWEI Mobile Broadband - ShellB"
+HUAWEI_SerialADeviceDesc    = "HUAWEI Mobile Broadband - SerialA"
+HUAWEI_SerialBDeviceDesc    = "HUAWEI Mobile Broadband - SerialB"
+HUAWEI_SerialCDeviceDesc    = "HUAWEI Mobile Broadband - SerialC"
+
+VDF_ShellADeviceDesc        = "Vodafone Mobile Broadband - ShellA"
+VDF_ShellBDeviceDesc        = "Vodafone Mobile Broadband - ShellB"
+VDF_SerialADeviceDesc       = "Vodafone Mobile Broadband - SerialA"
+VDF_SerialBDeviceDesc       = "Vodafone Mobile Broadband - SerialB"
+VDF_SerialCDeviceDesc       = "Vodafone Mobile Broadband - SerialC"
+
+ShellADeviceDesc            = "Mobile Broadband - ShellA"
+ShellBDeviceDesc            = "Mobile Broadband - ShellB"
+SerialADeviceDesc           = "Mobile Broadband - SerialA"
+SerialBDeviceDesc           = "Mobile Broadband - SerialB"
+SerialCDeviceDesc           = "Mobile Broadband - SerialC"
+
+HUAWEI_3GDIAGDeviceDesc     = "HUAWEI Mobile Connect - 3G Application Interface"
+HUAWEI_3GPCUIDeviceDesc     = "HUAWEI Mobile Connect - 3G PC UI Interface"
+HUAWEI_3GPCVoiceDeviceDesc  = "HUAWEI Mobile Connect - 3G PC Voice Interface"
+HUAWEI_3GGPSDeviceDesc      = "HUAWEI Mobile Connect - 3G GPS Interface"
+
+
+HUAWEI_PCUIDeviceDesc       = "HUAWEI Mobile Connect - PC UI Interface"
+HUAWEI_PCVoiceDeviceDesc    = "HUAWEI Mobile Connect - PC Voice Interface"
+HUAWEI_GPSDeviceDesc        = "HUAWEI Mobile Connect - GPS Interface"
+HUAWEI_DIAGDeviceDesc       = "HUAWEI Mobile Connect - Application Interface"
+HUAWEI_FingerPintDesc       = "HUAWEI Mobile Connect - Fingerprint Interface"
+HUAWEI_BTDeviceDesc         = "HUAWEI Mobile Connect - Bluetooth Interface"
+HUAWEI_ControlDeviceDesc    = "HUAWEI Mobile Connect - Control Interface"
+
+
+3GDIAGDeviceDesc            = "Mobile Connect - 3G Application Interface"
+3GPCUIDeviceDesc            = "Mobile Connect - 3G PC UI Interface"
+3GGPSDeviceDesc             = "Mobile Connect - 3G GPS Interface"
+3GPCVoiceDeviceDesc         = "Mobile Connect - 3G PC Voice Interface"
+3GBTDeviceDesc              = "Mobile Connect - 3G Bluetooth Interface"
+3GControlDeviceDesc         = "Mobile Connect - 3G Control Interface"
+3GFingerPintDesc            = "Mobile Connect - 3G Fingerprint Interface"
+
+DIAGDeviceDesc              = "Mobile Connect - Application Interface"
+PCUIDeviceDesc              = "Mobile Connect - PC UI Interface"
+PCVoiceDeviceDesc           = "Mobile Connect - PC Voice Interface"
+GPSDeviceDesc               = "Mobile Connect - GPS Interface"
+
+
+
+FingerPintDesc              = "Mobile Connect - Fingerprint Interface"
+BTDeviceDesc                = "Mobile Connect - Bluetooth Interface"
+ControlDeviceDesc           = "Mobile Connect - Control Interface"
+
+HUAWEI_TDPCUIDeviceDesc     = "HUAWEI Mobile CMCC AT Interface"
+HUAWEI_TDDIAGDeviceDesc     = "HUAWEI Mobile CMCC Debug Interface"
+
+VDF_3GDIAGDeviceDesc        = "Vodafone Mobile Broadband Diagnostics Port (Huawei)"
+VDF_3GPCUIDeviceDesc        = "Vodafone Mobile Broadband Secondary Port Modem (Huawei)"
+VDF_3GBTDeviceDesc          = "Vodafone Mobile Broadband Bluetooth Interface (Huawei)"
+VDF_3GCtrlDeviceDesc        = "Vodafone Mobile Broadband Control Interface (Huawei)"
+VDF_3GPCVoiceDeviceDesc     = "Vodafone Mobile Broadband 3G PC Voice Interface (Huawei)"
+VDF_3GGPSDeviceDesc         = "Vodafone Mobile Broadband NMEA Port (Huawei)"
+VDF_3GFingerPrint           = "Vodafone Mobile Broadband Fingerprint Interface (Huawei)"
+
+
+Mfg = "HUAWEI Technologies CO.,LTD"
+Disk_Description = "Huawei Driver Installation Disk"
+ServiceName = "hwusb_cdcacm"
+

@@ -1,0 +1,725 @@
+<xml>
+    <version>
+        <DriverVersion>5.01.10.00</DriverVersion>
+        <ConfigVersion>1.0.0.0</ConfigVersion>
+    </version>
+
+    <install>
+        <system version="WinXp">
+
+            <inf>
+                 <file desc="SWITCH">
+                        <name>ew_hwusbdev.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="FILTER">
+                        <name>ew_busfiLter.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ewser2k.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ewmdm2k.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ewnet.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewdcsc.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="UPGRADE">
+                        <name>ew_hwupgrade.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>usbccid.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="ENUM">
+                        <name>ew_jubusenum.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_jucdcacm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ew_jucdcmdm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_jucdcecm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="CTRL">
+                        <name>ew_juextctrl.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_cdcacm.inf</name>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ew_cdcmdm.inf</name>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_cdcecm.inf</name>
+                        <flag>4</flag>
+                 </file>
+            </inf>
+
+            <sys>
+                 <file desc="SWITCH">
+                        <name>ew_hwusbdev.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="FILTER">
+                        <name>ew_usbenumfilter.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ewusbmdm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ewusbnet.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewdcsc.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="UPGRADE">
+                        <name>ew_hwupgrade.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>usbccid.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="ENUM">
+                        <name>ew_jubusenum.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_jucdcacm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_jucdcecm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="CTRL">
+                        <name>ew_juextctrl.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_cdcacm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_cdcecm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>4</flag>
+                 </file>
+            </sys>
+
+            <dll>
+                 <file desc="COINSTALLER">
+                        <name>WdfCoInstaller01007.dll</name>
+                        <path>\system32\drivers</path>
+                        <delete>0</delete>
+                        <flag>2</flag>
+                 </file>
+            </dll>
+
+            <dev>
+                 <file desc="ENUM">
+                        <name>ew_jubusenum.inf</name>
+                        <id>huawei_enum_vbus</id>
+                        <flag>2</flag>
+                 </file>
+            </dev>
+
+            <parameter>
+
+            </parameter>
+
+        </system>
+
+        <system version="WinVista">
+
+            <inf>
+                 <file desc="SWITCH">
+                        <name>ew_hwusbdev.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="FILTER">
+                        <name>ew_busfilter.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ewser2k.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ewmdm2k.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ewnet.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewdcsc.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="UPGRADE">
+                        <name>ew_hwupgrade.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="ENUM">
+                        <name>ew_jubusenum.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_jucdcacm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ew_jucdcmdm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_jucdcecm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="CTRL">
+                        <name>ew_juextctrl.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_cdcacm.inf</name>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ew_cdcmdm.inf</name>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_cdcecm.inf</name>
+                        <flag>4</flag>
+                 </file>
+            </inf>
+
+            <sys>
+                 <file desc="SWITCH">
+                        <name>ew_hwusbdev.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="FILTER">
+                        <name>ew_usbenumfilter.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ewusbmdm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ewusbnet.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewdcsc.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="UPGRADE">
+                        <name>ew_hwupgrade.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="ENUM">
+                        <name>ew_jubusenum.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_jucdcacm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_jucdcecm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="CTRL">
+                        <name>ew_juextctrl.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_cdcacm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_cdcecm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>4</flag>
+                 </file>
+            </sys>
+
+            <dll>
+                 <file desc="COINSTALLER">
+                        <name>WdfCoInstaller01007.dll</name>
+                        <path>\system32\drivers</path>
+                        <delete>0</delete>
+                        <flag>2</flag>
+                 </file>
+            </dll>
+
+            <dev>
+                  <file desc="ENUM">
+                        <name>ew_jubusenum.inf</name>
+                        <id>huawei_enum_vbus</id>
+                        <flag>2</flag>
+               	  </file>
+            </dev>
+
+            <parameter>
+
+            </parameter>
+
+        </system>
+
+        <system version="Win7">
+
+            <inf>
+                 <file desc="SWITCH">
+                        <name>ew_hwusbdev.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="FILTER">
+                        <name>ew_busfilter.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ewser2k.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ewmdm2k.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ewusbwwan.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewdcsc.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="UPGRADE">
+                        <name>ew_hwupgrade.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewsmartcard.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="ENUM">
+                        <name>ew_jubusenum.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_jucdcacm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ew_jucdcmdm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_jucdcecm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_juwwanecm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="CTRL">
+                        <name>ew_juextctrl.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_cdcacm.inf</name>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ew_cdcmdm.inf</name>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_wwanecm.inf</name>
+                        <flag>4</flag>
+                 </file>
+            </inf>
+
+            <sys>
+                 <file desc="SWITCH">
+                        <name>ew_hwusbdev.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="FILTER">
+                        <name>ew_usbenumfilter.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ewusbmdm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ewusbwwan.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewdcsc.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewsmartcard.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="UPGRADE">
+                        <name>ew_hwupgrade.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="ENUM">
+                        <name>ew_jubusenum.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_jucdcacm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_jucdcecm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_juwwanecm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="CTRL">
+                        <name>ew_juextctrl.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_cdcacm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_wwanecm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>4</flag>
+                 </file>
+            </sys>
+
+            <dll>
+                 <file desc="COINSTALLER">
+                        <name>WdfCoInstaller01007.dll</name>
+                        <path>\system32\drivers</path>
+                        <delete>0</delete>
+                        <flag>2</flag>
+                 </file>
+            </dll>
+
+            <dev>
+                 <file desc="ENUM">
+                         <name>ew_jubusenum.inf</name>
+                         <id>huawei_enum_vbus</id>
+                         <flag>2</flag>
+                 </file>
+            </dev>
+
+            <parameter>
+                 <registry desc="wwan connect timeout">
+                         <root>HKEY_LOCAL_MACHINE</root>
+                         <path>SYSTEM\CurrentControlSet\Services\ewusbmbb</path>
+                         <key>WWANConnectTimeOut</key>
+                         <type>REG_DWORD</type>
+                         <value>150</value>
+                         <delete>1</delete>
+                 </registry>
+            </parameter>
+
+        </system>
+	<system version="Win8">
+
+            <inf>
+                 <file desc="SWITCH">
+                        <name>ew_hwusbdevcfg.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="FILTER">
+                        <name>ew_busfilter.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ewser2k.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ewmdm2k.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ewusbwwan.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewdcsc.inf</name>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="UPGRADE">
+                        <name>ew_hwupgrade.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewsmartcard.inf</name>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="ENUM">
+                        <name>ew_jubusenum.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_jucdcacm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ew_jucdcmdm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_jucdcecm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_juwwanecm.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="CTRL">
+                        <name>ew_juextctrl.inf</name>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_cdcacm.inf</name>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="MODEM">
+                        <name>ew_cdcmdm.inf</name>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_wwanecm.inf</name>
+                        <flag>4</flag>
+                 </file>
+            </inf>
+
+            <sys>
+                 <file desc="SWITCH">
+                        <name>ew_hwusbdev.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="FILTER">
+                        <name>ew_usbenumfilter.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ewusbmdm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ewusbwwan.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewdcsc.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>1</flag>
+                 </file>
+                 <file desc="PCSC">
+                        <name>ewsmartcard.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="UPGRADE">
+                        <name>ew_hwupgrade.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>0</flag>
+                 </file>
+                 <file desc="ENUM">
+                        <name>ew_jubusenum.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_jucdcacm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_jucdcecm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_juwwanecm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="CTRL">
+                        <name>ew_juextctrl.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>2</flag>
+                 </file>
+                 <file desc="SERIAL">
+                        <name>ew_cdcacm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>4</flag>
+                 </file>
+                 <file desc="NDIS">
+                        <name>ew_wwanecm.sys</name>
+                        <path>\system32\drivers</path>
+                        <delete>1</delete>
+                        <flag>4</flag>
+                 </file>
+            </sys>
+
+            <dll>
+                 <file desc="COINSTALLER">
+                        <name>WdfCoInstaller01007.dll</name>
+                        <path>\system32\drivers</path>
+                        <delete>0</delete>
+                        <flag>2</flag>
+                 </file>
+            </dll>
+
+            <dev>
+                 <file desc="ENUM">
+                         <name>ew_jubusenum.inf</name>
+                         <id>huawei_enum_vbus</id>
+                         <flag>2</flag>
+                 </file>
+            </dev>
+
+            <parameter>
+                 <registry desc="wwan connect timeout">
+                         <root>HKEY_LOCAL_MACHINE</root>
+                         <path>SYSTEM\CurrentControlSet\Services\ewusbmbb</path>
+                         <key>WWANConnectTimeOut</key>
+                         <type>REG_DWORD</type>
+                         <value>150</value>
+                         <delete>1</delete>
+                 </registry>
+            </parameter>
+
+        </system>
+
+    </install>
+
+</xml>

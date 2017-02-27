@@ -1,0 +1,95 @@
+; Copyright (c) 2010-2013 Huawei Incorporated
+; Manufacturer: Huawei Incorporated
+;
+; HUAWEI Technologies CO.,LTD huawei_enumerator USB transport layer
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGuid={36fc9e60-c465-11cf-8056-444553540000}
+Provider=%Mfg%
+DriverVer=02/17/2013,1.0.0.2
+CatalogFile=ew_hwupgrade.cat
+
+; ================= Device section =====================
+
+[Manufacturer]
+%Mfg%=DeviceList,NTx86,NTamd64
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+
+[SourceDisksFiles]
+ew_hwupgrade.sys = 1
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+; For Win2K
+[DeviceList]
+%DeviceDesc% = DevInstall, USB\VID_0456&PID_6588    
+
+; For XP and later
+[DeviceList.NTx86]
+%DeviceDesc% = DevInstall, USB\VID_0456&PID_6588
+
+; For XP and later x64
+[DeviceList.NTamd64]
+%DeviceDesc% = DevInstall, USB\VID_0456&PID_6588
+
+[DevInstall.NT]
+CopyFiles = DevInstall.Files.Ext
+
+[DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall.AddService
+
+[DevInstall.AddService]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\ew_hwupgrade.sys
+AddReg         = DevInstall.AddService.AddReg
+LoadOrderGroup = Base
+
+[DevInstall.AddService.AddReg]
+HKR,"Parameters","DataInOutPacketsPerXfer", 0x00010001, 0x08
+HKR,"Parameters","DebugLevel",0x00010001,1
+
+[DevInstall.Files.Ext]
+ew_hwupgrade.sys,,,0x6 ; COPYFLG_NOSKIP | COPYFLG_NOVERSIONCHECK
+
+;-------------- WDF Coinstaller installation
+[DestinationDirs]
+CoInstaller_CopyFiles = 10,System32
+
+[DevInstall.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[DevInstallVirtual.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+wdfcoinstaller01007.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01007.dll,WdfCoInstaller"
+
+[SourceDisksFiles]
+wdfcoinstaller01007.dll=1 ; make sure the number matches with SourceDisksNames
+
+[DevInstall.NT.Wdf]
+KmdfService = %ServiceName%, DevInstall_wdfsect
+
+[DevInstallVirtual.NT.Wdf]
+KmdfService = %ServiceName%, DevInstall_wdfsect
+
+[DevInstall_wdfsect]
+KmdfLibraryVersion = 1.7
+;---------------------------------------------------------------;
+[Strings]
+Mfg = "HUAWEI Technologies CO.,LTD"
+Disk_Description = "Huawei Driver Installation Disk"
+ServiceName = "huawei_update"
+DeviceDesc = "HUAWEI USB Device"

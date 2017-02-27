@@ -1,0 +1,997 @@
+; Copyright (c) 2010,2011 Huawei Incorporated
+; Manufacturer: Huawei Incorporated
+;
+; HUAWEI Technologies CO.,LTD huawei_enumerator USB transport layer
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+Provider=%Mfg%
+DriverVer=11/30/2013,2.6.2.3155
+CatalogFile=ew_jubusenum.cat
+
+; ================= Device section =====================
+
+[Manufacturer]
+%Mfg%=DeviceList,NTx86,NTamd64
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+
+[SourceDisksFiles]
+ew_jubusenum.sys = 1
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+; For Win2K
+[DeviceList]
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_06
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_07
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_0A
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_0B
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_0E
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_10
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_11
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_12
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_13
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_14
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_15
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_16
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_17
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_18
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_19
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_1A
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_1B
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_1C
+
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_48
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_49
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_4A
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_4B
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_4C
+
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_78
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_79
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_7A
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_7B
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_7C
+
+
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_61
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_62
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_63
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_64
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_65
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_66
+%NewEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_67
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6A
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6B
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6D
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6E
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_72
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_73
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_74
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_75
+%NewEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_76
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_31
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_32
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_33
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_35
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_36
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_37
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_3A
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_3B
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_3E
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_46
+
+%ControlDevice%  = DevInstallVirtual, huawei_enum_vbus
+%NewControlDevice%  = DevInstallVirtual, mbb_enum_vbus
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C05&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C05&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C05&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C06&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C06&MI_02
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C06&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C07&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_06
+
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C08&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C08&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C09&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C09&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C09&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0A&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0A&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0C&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0E&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0E&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0E&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0E&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0F&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C10&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C10&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C10&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C12&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C12&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C12&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C14&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C14&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C14&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C14&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C15&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C16&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_08
+%TDEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C17&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C17&MI_01
+%TDEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C18&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C18&MI_01
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C18&MI_02
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C19&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C19&MI_01
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C19&MI_02
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_01
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_02
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_03
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C1D&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_06
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1E&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1E&MI_02
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C1E&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1E&MI_05
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1F&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C1F&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1F&MI_04
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C21&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C21&MI_02
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C21&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C21&MI_04
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C22&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C22&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C22&MI_03
+
+%VDFControlDevice% = DevInstallVirtual, vdf_enum_vbus
+%HPControlDevice% = DevInstallVirtual, hp_enum_vbus
+
+; ==================Icera Generic PIDs==================
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1444&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1444&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1444&MI_02
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1445&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1445&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1445&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1445&MI_03
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144E&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_144E&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144E&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144E&MI_03
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144F&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_144F&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144F&MI_02
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_03
+
+; ==================Icera VDF PIDs==================
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AE&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14AE&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AE&MI_02
+
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AF&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14AF&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AF&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AF&MI_03
+
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B0&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14B0&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B0&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B0&MI_03
+
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B1&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14B1&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B1&MI_02
+
+; ==================Balong VDF PIDs==================
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A5&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14A5&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A5&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A5&MI_03
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A6&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14A6&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A6&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A6&MI_03
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A7&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14A7&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A7&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A7&MI_03
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14D6&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14D6&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14D6&MI_03
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14D6&MI_04
+
+;For E173s TME
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C23&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C23&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C23&MI_02
+;For device update, no huawei
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_155C&MI_00
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_155C&MI_01
+
+; ==================HP PIDs==================
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_00
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_01
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_02
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_05
+%HP3110EnumDeviceDesc% = DevInstallNet, USB\VID_03F0&PID_521D&MI_04
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_00
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_01
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_02
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_05
+%HP3114EnumDeviceDesc% = DevInstallNet, USB\VID_03F0&PID_541D&MI_04
+
+;=================WHCK TEST PID==================
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_03
+
+; For XP and later
+[DeviceList.NTx86]
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_06
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_07
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_0A
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_0B
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_0E
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_10
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_11
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_12
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_13
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_14
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_15
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_16
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_17
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_18
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_19
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_1A
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_1B
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_1C
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_48
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_49
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_4A
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_4B
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_4C
+
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_78
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_79
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_7A
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_7B
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_7C
+
+
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_61
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_62
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_63
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_64
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_65
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_66
+%NewEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_67
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6A
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6B
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6D
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6E
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_72
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_73
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_74
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_75
+%NewEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_76
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_31
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_32
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_33
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_35
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_36
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_37
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_3A
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_3B
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_3E
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_46
+
+%ControlDevice%  = DevInstallVirtual, huawei_enum_vbus
+%NewControlDevice%  = DevInstallVirtual, mbb_enum_vbus
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C05&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C05&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C05&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C06&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C06&MI_02
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C06&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C07&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_06
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C08&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C08&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C09&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C09&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C09&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0A&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0A&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0C&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0E&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0E&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0E&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0E&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0F&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C10&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C10&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C10&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C12&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C12&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C12&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C14&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C14&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C14&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C14&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C15&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C16&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_08
+%TDEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C17&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C17&MI_01
+%TDEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C18&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C18&MI_01
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C18&MI_02
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C19&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C19&MI_01
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C19&MI_02
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_01
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_02
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_03
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C1D&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_06
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1E&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1E&MI_02
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C1E&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1E&MI_05
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1F&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C1F&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1F&MI_04
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C21&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C21&MI_02
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C21&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C21&MI_04
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C22&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C22&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C22&MI_03
+
+%VDFControlDevice% = DevInstallVirtual, vdf_enum_vbus
+%HPControlDevice% = DevInstallVirtual, hp_enum_vbus
+
+; ==================Icera Generic PIDs==================
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1444&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1444&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1444&MI_02
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1445&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1445&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1445&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1445&MI_03
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144E&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_144E&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144E&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144E&MI_03
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144F&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_144F&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144F&MI_02
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_03
+
+; ==================Icera VDF PIDs==================
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AE&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14AE&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AE&MI_02
+
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AF&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14AF&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AF&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AF&MI_03
+
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B0&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14B0&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B0&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B0&MI_03
+
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B1&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14B1&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B1&MI_02
+
+; ==================Balong VDF PIDs==================
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A5&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14A5&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A5&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A5&MI_03
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A6&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14A6&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A6&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A6&MI_03
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A7&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14A7&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A7&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A7&MI_03
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14D6&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14D6&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14D6&MI_03
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14D6&MI_04
+
+;For E173s TME
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C23&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C23&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C23&MI_02
+;For device update, no huawei
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_155C&MI_00
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_155C&MI_01
+
+; ==================HP PIDs==================
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_00
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_01
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_02
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_05
+%HP3110EnumDeviceDesc% = DevInstallNet, USB\VID_03F0&PID_521D&MI_04
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_00
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_01
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_02
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_05
+%HP3114EnumDeviceDesc% = DevInstallNet, USB\VID_03F0&PID_541D&MI_04
+
+;=================WHCK TEST PID==================
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_03
+
+; For XP and later x64
+[DeviceList.NTamd64]
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_06
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_07
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_0A
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_0B
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_0E
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_10
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_11
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_12
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_13
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_14
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_15
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_16
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_17
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_18
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_19
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_1A
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_1B
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_1C
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_48
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_49
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_4A
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_4B
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_4C
+
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_78
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_79
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_7A
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_7B
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_7C
+
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_61
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_62
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_63
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_64
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_65
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_66
+%NewEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_67
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6A
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6B
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6D
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_6E
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_72
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_73
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_74
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_75
+%NewEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_76
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_31
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_32
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_33
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_35
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_36
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_37
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_3A
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_3B
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&Subclass_02&Prot_3E
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&Subclass_02&Prot_46
+
+%ControlDevice%  = DevInstallVirtual, huawei_enum_vbus
+%NewControlDevice%  = DevInstallVirtual, mbb_enum_vbus
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C05&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C05&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C05&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C06&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C06&MI_02
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C06&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C07&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C07&MI_06
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C08&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C08&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C09&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C09&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C09&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0A&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0A&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0C&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0C&MI_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0D&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0E&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0E&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0E&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0E&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C0F&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C0F&MI_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C10&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C10&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C10&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C11&MI_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C12&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C12&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C12&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C13&MI_04
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C14&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C14&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C14&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C14&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C15&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C15&MI_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C16&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_05
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C16&MI_08
+%TDEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C17&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C17&MI_01
+%TDEnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C18&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C18&MI_01
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C18&MI_02
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C19&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C19&MI_01
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C19&MI_02
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_00
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_01
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_02
+%TDEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1A&MI_03
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C1D&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1D&MI_06
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1E&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1E&MI_02
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C1E&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1E&MI_05
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1F&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C1F&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1F&MI_04
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C21&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C21&MI_02
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C21&MI_03
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C21&MI_04
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C22&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1C22&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C22&MI_03
+
+%VDFControlDevice% = DevInstallVirtual, vdf_enum_vbus
+%HPControlDevice% = DevInstallVirtual, hp_enum_vbus
+
+; ==================Icera Generic PIDs==================
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1444&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1444&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1444&MI_02
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1445&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_1445&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1445&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1445&MI_03
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144E&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_144E&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144E&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144E&MI_03
+
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144F&MI_00
+%EnumDeviceDesc% = DevInstallNet, USB\VID_12D1&PID_144F&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_144F&MI_02
+
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C1C&MI_03
+
+; ==================Icera VDF PIDs==================
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AE&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14AE&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AE&MI_02
+
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AF&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14AF&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AF&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14AF&MI_03
+
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B0&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14B0&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B0&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B0&MI_03
+
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B1&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14B1&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14B1&MI_02
+
+; ==================Balong VDF PIDs==================
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A5&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14A5&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A5&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A5&MI_03
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A6&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14A6&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A6&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A6&MI_03
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A7&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14A7&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A7&MI_02
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14A7&MI_03
+
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14D6&MI_00
+%VDFEnumDesc% = DevInstallNet, USB\VID_12D1&PID_14D6&MI_01
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14D6&MI_03
+%VDFEnumDesc% = DevInstall, USB\VID_12D1&PID_14D6&MI_04
+
+;For E173s TME
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C23&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C23&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_1C23&MI_02
+;For device update, no huawei
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_155C&MI_00
+%NewEnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_155C&MI_01
+
+; ==================HP PIDs==================
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_00
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_01
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_02
+%HP3110EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_521D&MI_05
+%HP3110EnumDeviceDesc% = DevInstallNet, USB\VID_03F0&PID_521D&MI_04
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_00
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_01
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_02
+%HP3114EnumDeviceDesc% = DevInstall, USB\VID_03F0&PID_541D&MI_05
+%HP3114EnumDeviceDesc% = DevInstallNet, USB\VID_03F0&PID_541D&MI_04
+
+;=================WHCK TEST PID==================
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_00
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_01
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_02
+%EnumDeviceDesc% = DevInstall, USB\VID_12D1&PID_15E5&MI_03
+
+[DevInstall.NT]
+CopyFiles=DevInstall.Files.Ext
+
+[DevInstallNet.NT]
+CopyFiles=DevInstall.Files.Ext
+
+[DevInstallVirtual.NT]
+CopyFiles=DevInstall.Files.Ext
+
+
+[DevInstall.NT.Services]
+AddService = %ServiceName%, %SPSVCINST_ASSOCSERVICE%, DevInstall.AddService
+
+[DevInstallNet.NT.Services]
+AddService = %ServiceName%, %SPSVCINST_ASSOCSERVICE%, DevInstall.AddService
+
+[DevInstallVirtual.NT.Services]
+AddService = %ServiceName%, %SPSVCINST_ASSOCSERVICE%, DevInstallVirtual.AddService
+
+[DevInstall.AddService]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\ew_jubusenum.sys
+AddReg         = DevInstall.AddService.AddReg
+
+[DevInstallVirtual.AddService]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\ew_jubusenum.sys
+AddReg         = DevInstallVirtual.AddService.AddReg
+LoadOrderGroup = Base
+
+[DevInstall.AddService.AddReg]
+HKR, Parameters, DebugLevel, 0x00010001, 1
+
+
+[DevInstallNet.NT.HW]
+AddReg = ExtControlEnable_AddReg
+AddReg = CdcInstall_NT_HW_AddReg_All
+AddReg = CdcInstall_NT_HW_AddReg_Net
+
+[ExtControlEnable_AddReg]
+HKR,,"ExtraControlEnabled",0x00010001,0x1 
+
+
+[DevInstall.NT.HW]
+AddReg = CdcInstall_NT_HW_AddReg_All
+AddReg = CdcInstall_NT_HW_AddReg
+
+; The parameters below override the standard CDC configuration.
+; This override can be used to define a proprietary USB-to-serial device
+; that is not compliant with CDC specification.
+[CdcInstall_NT_HW_AddReg_All]
+HKR,,"Configuration",0x00010001,0x2  ; USB configuration to use
+HKR,,"DataInterface",0x00010001,0x1  ; Data interface
+HKR,,"DataAlternateEnable",0x00010001,0x0  ; Alternate setting that enables the data interface
+HKR,,"DataAlternateDisable",0x00010001,0x0  ; Alternate setting that disables the data interface
+HKR,,"DataInEp",0x00010001,0x86      ; Data-in endpoint address in the "enable" alt setting
+HKR,,"DataOutEp",0x00010001,0x2      ; Data-out endpoint address in the "enable" alt setting
+
+HKR,,"CommInterface",0x00010001,0x0  ; Communication interface (optional)
+HKR,,"NotifyEp",0x00010001,0x84      ; Notification endpoint address (optional)
+
+; Add device for additional extra control (optional). If present, will be used
+; to send encapsulated commands.
+;HKR,,"ExtraControlEnabled",0x00010001,0x1 
+
+HKR,,"IdleTimeout",0x00010001,5     ; Number of seconds before the device goes idle
+
+HKR,,"EnableZLP",0x00010001,0x1      ; Enable zero length packet
+
+HKR,,"CtrlReqPoolSize",0x00010001,4 ; Control requests pool size.
+; Define the device type to override definition in device descriptors (optional).
+HKR,,"DeviceClassType",0x00010001,0x0     ; See in the documentation.
+
+; If enabled (0x1), child device under DC Control device, will not be removed
+; when usb device is unplugged and there is an open handle to the child device
+[CdcInstall_NT_HW_AddReg]
+HKR,,"CtrlDevHoldChildIfInUse",0x00010001,0x0
+
+[CdcInstall_NT_HW_AddReg_Net]
+HKR,,"CtrlDevHoldChildIfInUse",0x00010001,0x0
+
+[DevInstallVirtual.AddService.AddReg]
+HKR, Parameters\Wdf, VerboseOn,       0x00010001, 0
+HKR, Parameters\Wdf, VerifierOn,      0x00010001, 0
+HKR, Parameters\Wdf, DbgBreakOnError, 0x00010001, 0
+HKR, Parameters, UseControlDevice,    0x00010001, 1
+
+
+[DevInstall.Files.Ext]
+ew_jubusenum.sys,,,0x6 ; COPYFLG_NOSKIP | COPYFLG_NOVERSIONCHECK
+
+
+;-------------- WDF Coinstallers installation
+
+[DestinationDirs]
+CoInstaller_CopyFiles = 10,System32
+
+[DevInstall.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[DevInstallVirtual.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+wdfcoinstaller01007.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01007.dll,WdfCoInstaller"
+
+[SourceDisksFiles]
+wdfcoinstaller01007.dll=1 ; make sure the number matches with SourceDisksNames
+
+[DevInstall.NT.Wdf]
+KmdfService = %ServiceName%, DevInstall_wdfsect
+
+[DevInstallVirtual.NT.Wdf]
+KmdfService = %ServiceName%, DevInstall_wdfsect
+
+[DevInstall_wdfsect]
+KmdfLibraryVersion = 1.7
+
+;---------------------------------------------------------------;
+
+[Strings]
+ControlDevice = "HUAWEI Mobile Connect - Bus Enumerate Device"
+NewControlDevice = "Mobile Connect - Bus Enumerate Device"
+HPControlDevice = "HP Mobile Broadband USB Bus Enumerated Device"
+EnumDeviceDesc = "HUAWEI Enumerator Device"
+NewEnumDeviceDesc = "Enumerator Device"
+VDFControlDevice = "Vodafone Mobile Broadband Bus Enumerate Device (Huawei)"
+VDFEnumDesc      = "Vodafone Mobile Broadband Enumerator Device (Huawei)"
+TDEnumDeviceDesc = "HUAWEI Mobile CMCC Enumerator Device"
+HP3110EnumDeviceDesc = "HP hs3110 HSPA+ Mobile Broadband USB Enumerator Device"
+HP3114EnumDeviceDesc = "HP hs3114 HSPA+ Mobile Broadband USB Enumerator Device"
+Mfg = "HUAWEI Technologies CO.,LTD"
+Disk_Description = "Huawei Driver Installation Disk"
+ServiceName = "huawei_enumerator"
+SPSVCINST_ASSOCSERVICE = 0x00000002
+

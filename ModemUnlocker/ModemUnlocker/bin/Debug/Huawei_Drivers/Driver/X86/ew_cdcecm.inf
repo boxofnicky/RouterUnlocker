@@ -1,0 +1,213 @@
+; Copyright (c) 2010,2011 Huawei Incorporated
+; Manufacturer: Huawei Incorporated
+;
+; CDC ECM & NCM driver
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Net
+ClassGUID={4d36e972-e325-11ce-bfc1-08002be10318}
+Provider=%Mfg%
+DriverVer=04/14/2014,1.0.13.0
+CatalogFile=ew_cdcecm.cat
+
+[Manufacturer]
+%Mfg% = DeviceList,NTx86,NTamd64
+
+[SourceDisksNames]
+1 = %ew_cdcecm.DiskName%,,,""
+
+[SourceDisksFiles]
+ew_cdcecm.sys  = 1,,
+
+; For Win2K
+[DeviceList]
+%PNP21_HW_NetworkDesc%     = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_16
+%PNP21_VDF_NetworkDesc%    = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_46
+%PNP21_NetworkDesc%        = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_76
+
+%PNP21_HW_3G_NetworkDesc%  = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_07
+%PNP21_VDF_NetworkDesc%    = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_37
+%PNP21_NetworkDesc%        = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_67
+
+%PNP21_HW_NetworkDesc%     = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_11
+
+; for logo test
+%HUAWEI_NDISDeviceDesc%    = ew_cdcecm.ndi, USB\VID_12D1&PID_158F&MI_00
+
+; Windows XP and later
+[DeviceList.NTx86]
+%PNP21_HW_NetworkDesc%     = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_16
+%PNP21_VDF_NetworkDesc%    = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_46
+%PNP21_NetworkDesc%        = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_76
+
+%PNP21_HW_3G_NetworkDesc%  = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_07
+%PNP21_VDF_NetworkDesc%    = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_37
+%PNP21_NetworkDesc%        = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_67
+
+%PNP21_HW_NetworkDesc%     = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_11
+
+; for logo test
+%HUAWEI_NDISDeviceDesc% = ew_cdcecm.ndi, USB\VID_12D1&PID_158F&MI_00
+
+; For XP and later x64
+[DeviceList.NTamd64]
+%PNP21_HW_NetworkDesc%     = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_16
+%PNP21_VDF_NetworkDesc%    = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_46
+%PNP21_NetworkDesc%        = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_76
+
+%PNP21_HW_3G_NetworkDesc%  = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_07
+%PNP21_VDF_NetworkDesc%    = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_37
+%PNP21_NetworkDesc%        = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_67
+
+%PNP21_HW_NetworkDesc%     = ew_cdcecm.ndi, USB\VID_12D1&Subclass_03&Prot_11
+
+; for logo test
+%HUAWEI_NDISDeviceDesc% = ew_cdcecm.ndi, USB\VID_12D1&PID_158F&MI_00
+
+;-------------------------------------------------------------------------------
+; Virtual Ethernet Adapter
+;
+
+[ew_cdcecm.ndi]
+*IfType            = 6 ;     IF_TYPE_USB
+*MediaType         = NdisMedium802_3;
+*PhysicalMediaType = NdisPhysicalMediumUnspecified; 
+Characteristics    = 0x84 ; NCF_HAS_UI | NCF_PHYSICAL
+BusType            = 15 ; if you specify NCF_PHYSICAL, you must specify bustype
+AddReg             = ew_cdcecm.Reg, ParamsPromiscuous, ParamsIsNtb32, ParamsNTBInputSize, ParamsPacketsAccumulationTimeout, ParamsMaxNumOfDatagramsInNTB,FlowControlTimeOut,DisableAccumulationUpdate, NcmReinitializeEnable
+CopyFiles          = ew_cdcecm.CopyFiles
+
+
+[ECM_AddReg]
+HKR,, Platform,0x00010001,0x3 
+HKR,, WWAN,0x00010001,0x0
+HKR,, "SelectiveSuspendIdleTime", 0x00010001, 0x05
+
+[ew_cdcecm.ndi.Services]
+AddService      = %ServiceName%, 2, ew_cdcecm.Service, ew_cdcecm.EventLog
+
+[ew_cdcecm.ndi.HW]
+AddReg = ECM_AddReg
+
+;-----------------------------------------------------------------------------
+;
+[ew_cdcecm.Reg]
+HKR,    ,                         BusNumber,           0, "0"
+HKR, Ndi,                         Service,             0, "hwusb_cdcecm"
+HKR, Ndi\Interfaces,              UpperRange,          0, "ndis5"
+HKR, Ndi\Interfaces,              LowerRange,          0, "ethernet"
+HKR,    ,                         TcpAckFrqEnable,           0x00010001, 0   
+
+
+[ParamsPromiscuous]
+;
+;    Should the physical NIC be set to Promiscuous mode
+;
+HKR, Ndi\Params\Promiscuous,     ParamDesc, , %Promiscuous%
+HKR, Ndi\Params\Promiscuous,     Default,  ,"0"
+HKR, Ndi\Params\Promiscuous,     type, ,      enum
+HKR, Ndi\Params\Promiscuous\enum,"1",  ,     %Promiscuous_Enable%
+HKR, Ndi\Params\Promiscuous\enum,"0",  ,     %Promiscuous_Disable%
+
+[ParamsIsNtb32]
+HKR, Ndi\Params\IsNtb32,      ParamDesc, , %IsNtb32%
+HKR, Ndi\Params\IsNtb32,      Default, , "1"
+HKR, Ndi\Params\IsNtb32,      type, , enum
+HKR, Ndi\Params\IsNtb32\enum, "1", , "Yes"
+HKR, Ndi\Params\IsNtb32\enum, "0", , "No"
+
+[ParamsNTBInputSize]
+HKR, Ndi\Params\NTBInputSize,     ParamDesc, , %NTBInputSize%
+; If the following size is larger than the maximum allowed by the device, the
+; maximum value is used. 0 means to use the maximum allowed value of the device.
+HKR, Ndi\Params\NTBInputSize,     Default, , "0"
+HKR, Ndi\Params\NTBInputSize,     type, , dword
+
+[ParamsPacketsAccumulationTimeout]
+HKR, Ndi\Params\PacketsAccumulationTimeout,     ParamDesc, , %PacketsAccumulationTimeout%
+; Unit of PacketsAccumulationTimeout is usecs. Default value is 20 us.
+HKR, Ndi\Params\PacketsAccumulationTimeout,     Default, , "20"
+HKR, Ndi\Params\PacketsAccumulationTimeout,     type, , dword
+
+[ParamsMaxNumOfDatagramsInNTB]
+HKR, Ndi\Params\MaxNumOfDatagramsInNTB,     ParamDesc, , %MaxNumOfDatagramsInNTB%
+HKR, Ndi\Params\MaxNumOfDatagramsInNTB,     Default, , "64"
+HKR, Ndi\Params\MaxNumOfDatagramsInNTB,     type, , dword
+
+[FlowControlTimeOut]
+HKR, Ndi\Params\FlowControlTimeOut,     ParamDesc, , %FlowControlTimeout%
+HKR, Ndi\Params\FlowControlTimeOut,     Default, , "2800"
+HKR, Ndi\Params\FlowControlTimeOut,     type, , dword
+
+[DisableAccumulationUpdate]
+HKR, Ndi\Params\disable_accumulation_update,     ParamDesc, , %DisableAccumulationUpdate%
+HKR, Ndi\Params\disable_accumulation_update,     Default, , "0"
+HKR, Ndi\Params\disable_accumulation_update,     type, , dword
+
+[NcmReinitializeEnable]
+HKR, Ndi\Params\NcmReinitializeEnable, ParamDesc, , %NcmReinitializeEnable%
+HKR, Ndi\Params\NcmReinitializeEnable, Default, , "1"
+HKR, Ndi\Params\NcmReinitializeEnable, type, , dword
+
+;-----------------------------------------------------------------------------
+; DestinationDirs
+;
+[DestinationDirs]
+ew_cdcecm.CopyFiles = 12
+
+[ew_cdcecm.CopyFiles]
+ew_cdcecm.sys,,,0x6  ;COPYFLG_NOSKIP | COPYFLG_NOVERSIONCHECK
+;-----------------------------------------------------------------------------
+; Driver and Service Section
+;
+
+[ew_cdcecm.Service]
+ServiceType     = 1 ;%SERVICE_KERNEL_DRIVER%
+StartType       = 3 ;%SERVICE_DEMAND_START%
+ErrorControl    = 1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary   = %12%\ew_cdcecm.sys
+LoadOrderGroup  = NDIS
+AddReg          = ew_cdcecm.Service.Reg
+
+[ew_cdcecm.Service.Reg]
+HKR, , TextModeFlags,    0x00010001, 0x0001
+HKR, Parameters, DebugLevel, 0x00010001, 1
+
+[ew_cdcecm.EventLog]
+AddReg = ew_cdcecm.AddEventLog.Reg
+
+[ew_cdcecm.AddEventLog.Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported,   0x00010001, 7
+
+
+;-----------------------------------------------------------------------------
+; Localizable Strings
+;
+[Strings]
+Mfg = "HUAWEI"
+
+HUAWEI_NDISDeviceDesc      = "HUAWEI Mobile Connect - Network Adapter"
+
+;PNP2.1 Device descriptor
+PNP21_HW_3G_NetworkDesc = "HUAWEI Mobile Connect - 3G Network Card"
+PNP21_HW_NetworkDesc = "HUAWEI Mobile Connect - Network Card"
+PNP21_NetworkDesc = "Mobile Connect - Network Card"
+PNP21_VDF_NetworkDesc = "Vodafone Mobile Broadband Network Adapter (Huawei)"
+
+ew_cdcecm.DiskName         = "DriverCore Installation Disk"
+
+IsNtb32                    = "32bit mode"
+NTBInputSize               = "NTB input size"
+Promiscuous                = "Set the physical NIC to promiscuous mode"
+Promiscuous_Disable        = "Disable"
+ServiceName                = "hwusb_cdcecm"
+Promiscuous_Enable         = "Enable"
+PacketsAccumulationTimeout = "Packets Accumulation Timeout [usec]"
+MaxNumOfDatagramsInNTB     = "Maximum number of datagrams in NTB"
+FlowControlTimeout         = "Flow Control timeout interval in ms"
+NcmFlagDesc                = "Flag use to distinguish NCM or ECM"
+DisableAccumulationUpdate  = "Flag to disable NCM accumulation auto updation"
+NcmReinitializeEnable      = "Flag to enable NCM reinitialize after resume"

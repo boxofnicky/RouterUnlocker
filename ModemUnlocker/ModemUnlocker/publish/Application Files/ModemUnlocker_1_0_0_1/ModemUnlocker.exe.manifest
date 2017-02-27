@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ModemUnlocker.exe" version="1.0.0.1" publicKeyToken="ab965e30f3d0dece" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ModemUnlocker" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ModemUnlocker.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ModemUnlocker.exe" size="49152">
+      <assemblyIdentity name="ModemUnlocker" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>uKFnBYFWJUlX56aoN39PFHBksms=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ModemUnlocker.exe.config" size="183">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zmtMKrAEuvsQh2jJFtlCNruBIWE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. 
+      Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows Vista, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- If your application is designed to work with Windows 8, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 8.1, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=NICKY\Doozy" issuerKeyHash="f4d1c0fdf43e548dfecf6a07c6f5b56ab558afde" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>DXQg6SbQJE/s60Mu+MTyAGNSi9ovbiI6ivV9hMOeKdQ=</DigestValue></Reference></SignedInfo><SignatureValue>Ci0OJfqCHSPVw4fVDkBmuixX15U+mDDU65faXboS5xzOCnEBjrlnhUS+6WnMYkg8bNwD3clTvcBwyH4wAgCSQ7yT1PqN/R4zpiTfAneMoQ1XfQAMMD1U0mR5rLW9o/JrilyPmkuPqzReUy1u42ywCwNklqEQv64ONnKgBNv/7aM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wegAgG/lRhhhSZvkX9ezE4ss5tpRF6cWZ2f1CrwMEq0EqLhN65Nbhhj4+Zoj7aBvxX+Z4CoMV0607XMpRYVMTr7/WB7FeQbNan1J8wWWrWwJkVJx3bFv0sSHrefksoHH52oaKUELiKrN/qIPJ7houbNPQ/aYQR+E8Y9cPZFWw2U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d4299ec3847df58a3a226e2fda8b526300f2c4f82e43ebec4f24d026e920740d" Description="" Url=""><as:assemblyIdentity name="ModemUnlocker.exe" version="1.0.0.1" publicKeyToken="ab965e30f3d0dece" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=NICKY\Doozy</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>TiMB6uZMaZiFtZGEfkYtuZ8n4BVTkdJfcs03brw1dT0=</DigestValue></Reference></SignedInfo><SignatureValue>vqzV3CiNmmvO9njLZBfjeggvAMILKsmMR4VJFIzg4yLoarHcPM9S1kxsi8cRZptpuUs+TbFHvh9q0iD43+fb7GzVrt81U4Clmclvn9Sq/LQJ8gNJizKq02JbqTI1FaVL7Gy2q8yk4rqBO67QC3QGG1sPPxf1sqpy2Ue9Cyp8f5Q=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wegAgG/lRhhhSZvkX9ezE4ss5tpRF6cWZ2f1CrwMEq0EqLhN65Nbhhj4+Zoj7aBvxX+Z4CoMV0607XMpRYVMTr7/WB7FeQbNan1J8wWWrWwJkVJx3bFv0sSHrefksoHH52oaKUELiKrN/qIPJ7houbNPQ/aYQR+E8Y9cPZFWw2U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQeiPTbuxzm5hOROYjCGCEOjANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYATgBJAEMASwBZAFwARABvAG8AegB5MB4XDTE3MDIwOTE4MzAwOFoXDTE4MDIxMDAwMzAwOFowITEfMB0GA1UEAx4WAE4ASQBDAEsAWQBcAEQAbwBvAHoAeTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwegAgG/lRhhhSZvkX9ezE4ss5tpRF6cWZ2f1CrwMEq0EqLhN65Nbhhj4+Zoj7aBvxX+Z4CoMV0607XMpRYVMTr7/WB7FeQbNan1J8wWWrWwJkVJx3bFv0sSHrefksoHH52oaKUELiKrN/qIPJ7houbNPQ/aYQR+E8Y9cPZFWw2UCAwEAATANBgkqhkiG9w0BAQsFAAOBgQCCarxcQOCRDcWJpYBbPNfrSvaEpENCCL5gMtG8Ek1RSDHIJGtJz3sddz6bUOt6v/Wicplwz4nB7XE393uEgmgOMOz39UFeKkZHHoHY9/13Z3lwhU2MvWkC/Y7yoBvfpg7q/oIyFpZ42gKrIdN2J67QtL4y61WmOFDFkd5AnAxqUw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

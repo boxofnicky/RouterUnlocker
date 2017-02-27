@@ -1,0 +1,261 @@
+; Copyright (c) 2010,2011 Huawei Incorporated
+; Manufacturer: Huawei Incorporated
+;
+; DC Generic Driver
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class = System
+ClassGuid = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider=%Mfg%
+DriverVer=11/30/2013,2.6.2.3155
+CatalogFile=ew_juextctrl.cat
+
+; ================= Device Install section =====================
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%Mfg%=DeviceList,NTx86,NTamd64
+
+[SourceDisksFiles]
+ew_juextctrl.sys=1
+
+[SourceDisksNames]
+; diskid = disk-description[,[tag-or-cab-file],[unused,path][,flags]]
+1=%dc_dev.DiskName%,
+
+[DestinationDirs]
+DefaultDestDir=12
+
+; Windows 2000
+[DeviceList]
+; DisplayName=Section,DeviceId1,...,DeviceIdN
+%PNP21_HW_3G_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_07&ext_ctrl
+%PNP21_HW_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_11&ext_ctrl
+%PNP21_VDF_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_37&ext_ctrl
+%PNP21_HW_NetworkDesc% = DevInstall, USBCDCNCM\VID_12D1&Subclass_02&Prot_16&ext_ctrl
+%PNP21_VDF_NetworkDesc% = DevInstall, USBCDCNCM\VID_12D1&Subclass_02&Prot_46&ext_ctrl
+%PNP21_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_67&ext_ctrl
+%PNP21_NetworkDesc% = DevInstall, USBCDCNCM\VID_12D1&Subclass_02&Prot_76&ext_ctrl
+
+%dc_ecm_dev.DevDesc%=DevInstall, usbcdcncm\compat&ext_ctrl
+%dc_ecm_dev.DevDesc%=DevInstall, usbcdcecm\compat&ext_ctrl
+%dc_ecm_dev.DevDesc%=DevInstall, usbcdcacm\compat&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C06&MI_03&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C07&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C09&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0A&MI_02&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0C&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0E&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0F&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C14&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C15&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C16&MI_01&ext_ctrl
+%dc_td_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C17&MI_00&ext_ctrl
+%dc_td_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C18&MI_00&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCNCM\VID_12D1&PID_1C1D&MI_01&ext_ctrl
+
+; ==================Icera Generic PIDs==================
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1444&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1445&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_144E&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_144F&MI_01&ext_ctrl
+
+; ==================Icera VDF PIDs==================
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14AE&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14AF&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14B0&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14B1&MI_01&ext_ctrl
+
+; ==================Balong VDF PIDs==================
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14A5&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14A6&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14A7&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14D6&MI_01&ext_ctrl
+
+; ==================HP PIDs==================
+%HP3110dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_03F0&PID_521D&MI_04&ext_ctrl
+%HP3114dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_03F0&PID_541D&MI_04&ext_ctrl
+
+;=================WHCK TEST PID=============
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_15E5&MI_00&ext_ctrl
+
+; Windows XP and later
+[DeviceList.NTx86]
+; DisplayName=Section,DeviceId1,...,DeviceIdN
+%PNP21_HW_3G_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_07&ext_ctrl
+%PNP21_HW_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_11&ext_ctrl
+%PNP21_VDF_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_37&ext_ctrl
+%PNP21_HW_NetworkDesc% = DevInstall, USBCDCNCM\VID_12D1&Subclass_02&Prot_16&ext_ctrl
+%PNP21_VDF_NetworkDesc% = DevInstall, USBCDCNCM\VID_12D1&Subclass_02&Prot_46&ext_ctrl
+%PNP21_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_67&ext_ctrl
+%PNP21_NetworkDesc% = DevInstall, USBCDCNCM\VID_12D1&Subclass_02&Prot_76&ext_ctrl
+
+%dc_ecm_dev.DevDesc%=DevInstall, usbcdcncm\compat&ext_ctrl
+%dc_ecm_dev.DevDesc%=DevInstall, usbcdcecm\compat&ext_ctrl
+%dc_ecm_dev.DevDesc%=DevInstall, usbcdcacm\compat&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C06&MI_03&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C07&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C09&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0A&MI_02&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0C&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0E&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0F&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C14&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C15&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C16&MI_01&ext_ctrl
+%dc_td_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C17&MI_00&ext_ctrl
+%dc_td_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C18&MI_00&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCNCM\VID_12D1&PID_1C1D&MI_01&ext_ctrl
+
+; ==================Icera Generic PIDs==================
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1444&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1445&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_144E&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_144F&MI_01&ext_ctrl
+
+; ==================Icera VDF PIDs==================
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14AE&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14AF&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14B0&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14B1&MI_01&ext_ctrl
+
+; ==================Balong VDF PIDs==================
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14A5&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14A6&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14A7&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14D6&MI_01&ext_ctrl
+
+; ==================HP PIDs==================
+%HP3110dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_03F0&PID_521D&MI_04&ext_ctrl
+%HP3114dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_03F0&PID_541D&MI_04&ext_ctrl
+
+;=================WHCK TEST PID=============
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_15E5&MI_00&ext_ctrl
+
+; For XP and later x64
+[DeviceList.NTamd64]
+; DisplayName=Section,DeviceId1,...,DeviceIdN
+%PNP21_HW_3G_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_07&ext_ctrl
+%PNP21_HW_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_11&ext_ctrl
+%PNP21_VDF_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_37&ext_ctrl
+%PNP21_HW_NetworkDesc% = DevInstall, USBCDCNCM\VID_12D1&Subclass_02&Prot_16&ext_ctrl
+%PNP21_VDF_NetworkDesc% = DevInstall, USBCDCNCM\VID_12D1&Subclass_02&Prot_46&ext_ctrl
+%PNP21_NetworkDesc% = DevInstall, USBCDCECM\VID_12D1&Subclass_02&Prot_67&ext_ctrl
+%PNP21_NetworkDesc% = DevInstall, USBCDCNCM\VID_12D1&Subclass_02&Prot_76&ext_ctrl
+
+%dc_ecm_dev.DevDesc%=DevInstall, usbcdcncm\compat&ext_ctrl
+%dc_ecm_dev.DevDesc%=DevInstall, usbcdcecm\compat&ext_ctrl
+%dc_ecm_dev.DevDesc%=DevInstall, usbcdcacm\compat&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C06&MI_03&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C07&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C09&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0A&MI_02&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0C&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0E&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C0F&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C14&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C15&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C16&MI_01&ext_ctrl
+%dc_td_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C17&MI_00&ext_ctrl
+%dc_td_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1C18&MI_00&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCNCM\VID_12D1&PID_1C1D&MI_01&ext_ctrl
+
+; ==================Icera Generic PIDs==================
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1444&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_1445&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_144E&MI_01&ext_ctrl
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_144F&MI_01&ext_ctrl
+
+; ==================Icera VDF PIDs==================
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14AE&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14AF&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14B0&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14B1&MI_01&ext_ctrl
+
+; ==================Balong VDF PIDs==================
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14A5&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14A6&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14A7&MI_01&ext_ctrl
+%dc_vdf_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_14D6&MI_01&ext_ctrl
+
+; ==================HP PIDs==================
+%HP3110dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_03F0&PID_521D&MI_04&ext_ctrl
+%HP3114dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_03F0&PID_541D&MI_04&ext_ctrl
+
+;=================WHCK TEST PID=============
+%dc_ecm_dev.DevDesc% = DevInstall, USBCDCECM\VID_12D1&PID_15E5&MI_00&ext_ctrl
+
+[DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddService_AddReg
+
+[DevInstall_CopyFiles]
+ew_juextctrl.sys,,,0x6    ; COPYFLG_NOSKIP | COPYFLG_NOVERSIONCHECK
+
+[DevInstall.NT.Services]
+AddService = %dc_dev.ServiceName%, 0x00000002, DevInstall_AddService 
+
+[DevInstall_AddService]
+ServiceType   = 1                  ; SERVICE_KERNEL_DRIVER
+StartType     = 3                  ; SERVICE_DEMAND_START
+ErrorControl  = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary = %12%\ew_juextctrl.sys
+AddReg        = ew_juextctrl_Service_Reg
+
+[DevInstall_AddService_AddReg]
+HKR, Parameters\Wdf, VerboseOn,       0x00010001, 0
+HKR, Parameters\Wdf, VerifierOn,      0x00010001, 0
+HKR, Parameters\Wdf, DbgBreakOnError, 0x00010001, 0
+HKR, Parameters,     DebugLevel,      0x00010001, 1
+; HKR,, DeviceType, 1, 01
+
+[ew_juextctrl_Service_Reg]
+HKR, Parameters, DebugLevel, 0x00010001, 1
+
+[DevInstall.NT.HW]
+
+;
+;-------------- WDF Coinstaller installation
+;
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[DevInstall.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01007.dll,WdfCoInstaller"
+
+[CoInstaller_CopyFiles]
+wdfcoinstaller01007.dll
+
+[SourceDisksFiles]
+wdfcoinstaller01007.dll=1 ; make sure the number matches with SourceDisksNames
+
+[DevInstall.NT.Wdf]
+KmdfService = %dc_dev.ServiceName%, dc_dev_wdfsect
+
+[dc_dev_wdfsect]
+KmdfLibraryVersion = 1.7
+
+[Strings]
+Mfg = "HUAWEI Technologies Co.,LTD"
+dc_dev.ServiceName = "huawei_ext_ctrl"
+dc_dev.DiskName = "DriverCore Installation Disk"
+dc_ecm_dev.DevDesc = "HUAWEI Mobile Connect - Extra Control Device"
+new_dc_ecm_dev.DevDesc = "Mobile Connect - Extra Control Device"
+dc_td_ecm_dev.DevDesc = "HUAWEI Mobile CMCC Connect - Extra Control Device"
+dc_vdf_ecm_dev.DevDesc = "Vodafone Mobile Broadband - Extra Control Device"
+;PNP2.1 device desc
+;PNP2.1 Device descriptor
+PNP21_HW_3G_NetworkDesc = "HUAWEI Mobile Connect - Extra Control Device"
+PNP21_HW_NetworkDesc = "HUAWEI Mobile Connect - Extra Control Device"
+PNP21_NetworkDesc = "Mobile Connect - Extra Control Device"
+PNP21_VDF_NetworkDesc = "Vodafone Mobile Broadband - Extra Control Device"
+HP3110dc_ecm_dev.DevDesc = "HP hs3110 HSPA+ Mobile Broadband Module Network Device -Control"
+HP3114dc_ecm_dev.DevDesc = "HP hs3114 HSPA+ Mobile Broadband Module Network Device -Control"

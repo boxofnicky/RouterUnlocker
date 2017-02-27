@@ -1,0 +1,684 @@
+; Copyright (c) 2010,2011 Huawei Incorporated
+; Manufacturer: Huawei Incorporated
+; 
+;
+; HUAWEI Technologies CO.,LTD huawei_cdcacm Virtual Serial Port
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%Mfg%
+DriverVer=11/30/2013,2.6.2.3155
+CatalogFile=ew_jucdcacm.cat
+
+; ================= Device Install section =====================
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%Mfg%=DeviceList,NTx86,NTamd64
+
+[SourceDisksFiles]
+ew_jucdcacm.sys=1
+
+[SourceDisksNames]
+; diskid = disk-description[,[tag-or-cab-file],[unused,path][,flags]]
+1=%Disk_Description%,
+
+[DestinationDirs]
+DefaultDestDir=12
+
+; Windows 2000
+[DeviceList]
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_03
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_02
+%GPSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_05
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_06	
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_0A
+%FingerPintDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_0B
+%PCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_0E
+%3GPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_12
+%3GDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_13
+%3GGPSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_14
+%3GPCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_15
+
+%HWShellADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_18
+%HWShellBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_19
+%HWSerialADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_1A
+%HWSerialBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_1B
+%HWSerialCDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_1C
+
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_33
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_32
+%VDFGPSDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_35
+%VDFCtrlDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_36 
+%VDFBTDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_3A
+%VDFFingerPrint% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_3B
+%VDFPCVoiceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_3E
+
+%VDFShellADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_48
+%VDFShellBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_49
+%VDFSerialADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_4A
+%VDFSerialBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_4B
+%VDFSerialCDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_4C
+
+%New3GPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_62
+%New3GDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_63
+%New3GGPSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_65
+%New3GPCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_6E
+%NewBTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_6A
+%NewFingerPintDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_6B
+%NewControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_66
+
+
+%ShellADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_78
+%ShellBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_79
+%SerialADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_7A
+%SerialBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_7B
+%SerialCDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_7C
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C05&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C05&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C06&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C06&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C07&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C07&MI_03
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C07&MI_06
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C08&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C09&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C09&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0A&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0C&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0C&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0C&MI_04
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0D&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0D&MI_02
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0D&MI_03
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0E&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0E&MI_03
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0F&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0F&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0F&MI_05
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C10&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C10&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C11&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C11&MI_02
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C11&MI_04
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C12&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C12&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C13&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C13&MI_02
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C13&MI_04
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C14&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C14&MI_03
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C15&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C15&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C15&MI_05
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_05
+%BTDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_08
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C17&MI_01
+%TDDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C18&MI_01
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C18&MI_02
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C19&MI_02
+%TDDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1A&MI_02
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1A&MI_03
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1D&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1D&MI_03
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C1D&MI_06
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1E&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1E&MI_02
+%BTDeviceDesc% 	 = DevInstall, USBCDCACM\VID_12D1&PID_1C1E&MI_05
+
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1F&MI_00
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C1F&MI_04
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C21&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C21&MI_02
+%BTDeviceDesc% 	 = DevInstall, USBCDCACM\VID_12D1&PID_1C21&MI_04
+
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C22&MI_00
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C22&MI_03
+
+; ==================Icera Generic PIDs==================
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1444&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1445&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1445&MI_03
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_144E&MI_00
+%PCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_144E&MI_03
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_144F&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1c1c&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1c1c&MI_03
+%PCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1c1c&MI_02
+
+; ==================Icera VDF PIDs==================
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14AE&MI_00
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14AF&MI_00
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14AF&MI_03
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14B0&MI_00
+%VDFPCVoiceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14B0&MI_03
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14B1&MI_00
+; DisplayName=Section,DeviceId1,...,DeviceIdN
+
+; ==================Balong VDF PIDs==================
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A5&MI_02
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A5&MI_03
+
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A6&MI_02
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A6&MI_03
+
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A7&MI_02
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A7&MI_03
+
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14D6&MI_00
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14D6&MI_04
+%VDFBTDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14D6&MI_03
+
+;For E173s TME
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C23&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C23&MI_01
+;For device update, no huawei
+%NewPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_155C&MI_00
+%NewDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_155C&MI_01
+
+; ==================HP PIDs==================
+%HP3110PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_521D&MI_01
+%HP3110DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_521D&MI_02
+%HP3110GNSSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_03F0&PID_521D&MI_05
+%HP3114PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_541D&MI_01
+%HP3114DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_541D&MI_02
+%HP3114GNSSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_03F0&PID_541D&MI_05
+
+;=================WHCK TEST PID==================
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_15E5&MI_01
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_15E5&MI_02
+
+; Windows XP and later
+[DeviceList.NTx86]
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_03
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_02
+%GPSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_05
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_06	
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_0A
+%FingerPintDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_0B
+%PCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_0E
+%3GPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_12
+%3GDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_13
+%3GGPSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_14
+%3GPCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_15
+
+%HWShellADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_18
+%HWShellBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_19
+%HWSerialADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_1A
+%HWSerialBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_1B
+%HWSerialCDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_1C
+
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_33
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_32
+%VDFGPSDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_35
+%VDFCtrlDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_36 
+%VDFBTDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_3A
+%VDFFingerPrint% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_3B
+%VDFPCVoiceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_3E
+
+%VDFShellADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_48
+%VDFShellBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_49
+%VDFSerialADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_4A
+%VDFSerialBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_4B
+%VDFSerialCDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_4C
+
+%New3GPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_62
+%New3GDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_63
+%New3GGPSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_65
+%New3GPCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_6E
+%NewBTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_6A
+%NewFingerPintDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_6B
+%NewControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_66
+
+
+
+%ShellADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_78
+%ShellBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_79
+%SerialADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_7A
+%SerialBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_7B
+%SerialCDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_7C
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C05&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C05&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C06&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C06&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C07&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C07&MI_03
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C07&MI_06
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C08&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C09&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C09&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0A&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0C&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0C&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0C&MI_04
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0D&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0D&MI_02
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0D&MI_03
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0E&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0E&MI_03
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0F&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0F&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0F&MI_05
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C10&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C10&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C11&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C11&MI_02
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C11&MI_04
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C12&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C12&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C13&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C13&MI_02
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C13&MI_04
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C14&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C14&MI_03
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C15&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C15&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C15&MI_05
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_05
+%BTDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_08
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C17&MI_01
+%TDDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C18&MI_01
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C18&MI_02
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C19&MI_02
+%TDDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1A&MI_02
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1A&MI_03
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1D&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1D&MI_03
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C1D&MI_06
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1E&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1E&MI_02
+%BTDeviceDesc% 	 = DevInstall, USBCDCACM\VID_12D1&PID_1C1E&MI_05
+
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1F&MI_00
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C1F&MI_04
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C21&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C21&MI_02
+%BTDeviceDesc% 	 = DevInstall, USBCDCACM\VID_12D1&PID_1C21&MI_04
+
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C22&MI_00
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C22&MI_03
+
+; ==================Icera Generic PIDs==================
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1444&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1445&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1445&MI_03
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_144E&MI_00
+%PCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_144E&MI_03
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_144F&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1c1c&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1c1c&MI_03
+%PCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1c1c&MI_02
+
+; ==================Icera VDF PIDs==================
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14AE&MI_00
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14AF&MI_00
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14AF&MI_03
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14B0&MI_00
+%VDFPCVoiceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14B0&MI_03
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14B1&MI_00
+; DisplayName=Section,DeviceId1,...,DeviceIdN
+
+; ==================Balong VDF PIDs==================
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A5&MI_02
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A5&MI_03
+
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A6&MI_02
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A6&MI_03
+
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A7&MI_02
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A7&MI_03
+
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14D6&MI_00
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14D6&MI_04
+%VDFBTDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14D6&MI_03
+
+;For E173s TME
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C23&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C23&MI_01
+;For device update, no huawei
+%NewPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_155C&MI_00
+%NewDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_155C&MI_01
+
+; ==================HP PIDs==================
+%HP3110PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_521D&MI_01
+%HP3110DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_521D&MI_02
+%HP3110GNSSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_03F0&PID_521D&MI_05
+%HP3114PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_541D&MI_01
+%HP3114DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_541D&MI_02
+%HP3114GNSSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_03F0&PID_541D&MI_05
+
+;=================WHCK TEST PID==================
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_15E5&MI_01
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_15E5&MI_02
+
+; For XP and later x64
+[DeviceList.NTamd64]
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_03
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_02
+%GPSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_05
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_06	
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_0A
+%FingerPintDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_0B
+%PCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_0E
+%3GPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_12
+%3GDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_13
+%3GGPSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_14
+%3GPCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_15
+
+%HWShellADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_18
+%HWShellBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_19
+%HWSerialADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_1A
+%HWSerialBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_1B
+%HWSerialCDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_1C
+
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_33
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_32
+%VDFGPSDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_35
+%VDFCtrlDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_36 
+%VDFBTDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_3A
+%VDFFingerPrint% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_3B
+%VDFPCVoiceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_3E
+
+%VDFShellADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_48
+%VDFShellBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_49
+%VDFSerialADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_4A
+%VDFSerialBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_4B
+%VDFSerialCDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_4C
+
+%New3GPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_62
+%New3GDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_63
+%New3GGPSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_65
+%New3GPCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_6E
+%NewBTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_6A
+%NewFingerPintDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_6B
+%NewControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_66
+
+
+%ShellADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_78
+%ShellBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_79
+%SerialADeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_7A
+%SerialBDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_7B
+%SerialCDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&Subclass_02&Prot_7C
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C05&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C05&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C06&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C06&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C07&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C07&MI_03
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C07&MI_06
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C08&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C09&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C09&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0A&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0C&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0C&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0C&MI_04
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0D&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0D&MI_02
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0D&MI_03
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0E&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0E&MI_03
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0F&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0F&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C0F&MI_05
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C10&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C10&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C11&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C11&MI_02
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C11&MI_04
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C12&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C12&MI_02
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C13&MI_01
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C13&MI_02
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C13&MI_04
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C14&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C14&MI_03
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C15&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C15&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C15&MI_05
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_03
+%ControlDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_05
+%BTDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C16&MI_08
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C17&MI_01
+%TDDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C18&MI_01
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C18&MI_02
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C19&MI_02
+%TDDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1A&MI_02
+%TDPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1A&MI_03
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1D&MI_02
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1D&MI_03
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C1D&MI_06
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1E&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1E&MI_02
+%BTDeviceDesc% 	 = DevInstall, USBCDCACM\VID_12D1&PID_1C1E&MI_05
+
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C1F&MI_00
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C1F&MI_04
+
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C21&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C21&MI_02
+%BTDeviceDesc% 	 = DevInstall, USBCDCACM\VID_12D1&PID_1C21&MI_04
+
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C22&MI_00
+%BTDeviceDesc%   = DevInstall, USBCDCACM\VID_12D1&PID_1C22&MI_03
+
+; ==================Icera Generic PIDs==================
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1444&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1445&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1445&MI_03
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_144E&MI_00
+%PCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_144E&MI_03
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_144F&MI_00
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1c1c&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1c1c&MI_03
+%PCVoiceDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1c1c&MI_02
+
+; ==================Icera VDF PIDs==================
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14AE&MI_00
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14AF&MI_00
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14AF&MI_03
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14B0&MI_00
+%VDFPCVoiceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14B0&MI_03
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14B1&MI_00
+; DisplayName=Section,DeviceId1,...,DeviceIdN
+
+; ==================Balong VDF PIDs==================
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A5&MI_02
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A5&MI_03
+
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A6&MI_02
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A6&MI_03
+
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A7&MI_02
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14A7&MI_03
+
+%VDFPcuiDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14D6&MI_00
+%VDFDiagDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14D6&MI_04
+%VDFBTDesc% = DevInstall, USBCDCACM\VID_12D1&PID_14D6&MI_03
+
+;For E173s TME
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C23&MI_00
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_1C23&MI_01
+;For device update, no huawei
+%NewPCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_155C&MI_00
+%NewDIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_155C&MI_01
+
+; ==================HP PIDs==================
+%HP3110PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_521D&MI_01
+%HP3110DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_521D&MI_02
+%HP3110GNSSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_03F0&PID_521D&MI_05
+%HP3114PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_541D&MI_01
+%HP3114DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_03F0&PID_541D&MI_02
+%HP3114GNSSDeviceDesc% = GPS_DevInstall, USBCDCACM\VID_03F0&PID_541D&MI_05
+
+;=================WHCK TEST PID==================
+%PCUIDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_15E5&MI_01
+%DIAGDeviceDesc% = DevInstall, USBCDCACM\VID_12D1&PID_15E5&MI_02
+
+[DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg
+
+[GPS_DevInstall.NT]
+CopyFiles = DevInstall_CopyFiles
+AddReg = DevInstall_AddReg, GPS_Identify_AddReg
+
+[DevInstall_CopyFiles]
+ew_jucdcacm.sys,,,0x6    ; COPYFLG_NOSKIP | COPYFLG_NOVERSIONCHECK
+
+[DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[GPS_DevInstall.NT.Services]
+AddService = %ServiceName%, 0x00000002, DevInstall_AddService 
+
+[DevInstall_AddService]
+ServiceType   = 1                  ; SERVICE_KERNEL_DRIVER
+StartType     = 3                  ; SERVICE_DEMAND_START
+ErrorControl  = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary = %12%\ew_jucdcacm.sys
+Addreg = DevInstall_AddService_Addreg
+
+[DevInstall_AddService_Addreg]
+HKR, Parameters, DebugLevel, 0x00010001, 1
+HKR, Parameters, DebugPrintCom, 0x00010001, 0
+HKR, Parameters, RxCharCtrl, 0x00010001, 1
+
+[DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[GPS_DevInstall.NT.HW]
+AddReg = DevInstall_NT_HW_AddReg
+
+[DevInstall_NT_HW_AddReg]
+HKR,,"DataInPacketsPerXfer",0x00010001,0x8 ; USB packets per single IN request
+HKR,,"DataInBuffers",0x00010001,0x80 ; Number of USB IN requests to be buffered
+HKR,,"MsCommFixEnabled",0x00010001,0x01 ;
+
+
+;-------------- Add standard properties page (displayed in Device Manager)
+[DevInstall_AddReg]
+HKR,,PortSubClass,1,01 ; "01" stands for serial port
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[GPS_Identify_AddReg]
+HKR,,PortIdentify,,HWGPS
+
+;
+;-------------- WDF Coinstaller installation
+;
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[DevInstall.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01007.dll,WdfCoInstaller"
+
+[CoInstaller_CopyFiles]
+wdfcoinstaller01007.dll
+
+[SourceDisksFiles]
+wdfcoinstaller01007.dll=1 ; make sure the number matches with SourceDisksNames
+
+[DevInstall.NT.Wdf]
+KmdfService = %ServiceName%, DevInstall_wdfsect
+
+[DevInstall_wdfsect]
+KmdfLibraryVersion = 1.7
+
+[Strings]
+HWShellADeviceDesc = "HUAWEI Mobile Broadband - ShellA"
+HWShellBDeviceDesc = "HUAWEI Mobile Broadband - ShellB"
+HWSerialADeviceDesc = "HUAWEI Mobile Broadband - SerialA"
+HWSerialBDeviceDesc = "HUAWEI Mobile Broadband - SerialB"
+HWSerialCDeviceDesc = "HUAWEI Mobile Broadband - SerialC"
+
+VDFShellADeviceDesc = "Vodafone Mobile Broadband  ShellA(Huawei)"
+VDFShellBDeviceDesc = "Vodafone Mobile Broadband  ShellB(Huawei)"
+VDFSerialADeviceDesc = "Vodafone Mobile Broadband  SerialA(Huawei)"
+VDFSerialBDeviceDesc = "Vodafone Mobile Broadband  SerialB(Huawei)"
+VDFSerialCDeviceDesc = "Vodafone Mobile Broadband  SerialC(Huawei)"
+
+ShellADeviceDesc = "Mobile Broadband - ShellA"
+ShellBDeviceDesc = "Mobile Broadband - ShellB"
+SerialADeviceDesc = "Mobile Broadband - SerialA"
+SerialBDeviceDesc = "Mobile Broadband - SerialB"
+SerialCDeviceDesc = "Mobile Broadband - SerialC"
+
+DIAGDeviceDesc = "HUAWEI Mobile Connect - 3G Application Interface"
+PCUIDeviceDesc = "HUAWEI Mobile Connect - 3G PC UI Interface"
+PCVoiceDeviceDesc = "HUAWEI Mobile Connect - 3G PC Voice Interface"
+GPSDeviceDesc = "HUAWEI Mobile Connect - 3G GPS Interface"
+
+3GDIAGDeviceDesc = "HUAWEI Mobile Connect - Application Interface"
+3GPCUIDeviceDesc = "HUAWEI Mobile Connect - PC UI Interface"
+3GPCVoiceDeviceDesc = "HUAWEI Mobile Connect - PC Voice Interface"
+3GGPSDeviceDesc = "HUAWEI Mobile Connect - GPS Interface"
+
+
+NewDIAGDeviceDesc = "Mobile Connect - 3G Application Interface"
+NewPCUIDeviceDesc = "Mobile Connect - 3G PC UI Interface"
+NewPCVoiceDeviceDesc = "Mobile Connect - 3G PC Voice Interface"
+NewGPSDeviceDesc = "Mobile Connect - 3G GPS Interface"
+New3GDIAGDeviceDesc = "Mobile Connect - Application Interface"
+New3GPCUIDeviceDesc = "Mobile Connect - PC UI Interface"
+New3GPCVoiceDeviceDesc = "Mobile Connect - PC Voice Interface"
+New3GGPSDeviceDesc = "Mobile Connect - GPS Interface"
+
+FingerPintDesc = "HUAWEI Mobile Connect - Fingerprint Interface"
+BTDeviceDesc = "HUAWEI Mobile Connect - Bluetooth Interface"
+ControlDeviceDesc = "HUAWEI Mobile Connect - Control Interface"
+
+NewFingerPintDesc = "Mobile Connect - Fingerprint Interface"
+NewBTDeviceDesc = "Mobile Connect - Bluetooth Interface"
+NewControlDeviceDesc = "Mobile Connect - Control Interface"
+
+TDPCUIDeviceDesc = "HUAWEI Mobile CMCC AT Interface"
+TDDIAGDeviceDesc = "HUAWEI Mobile CMCC Debug Interface"
+
+VDFDiagDesc = "Vodafone Mobile Broadband Diagnostics Port (Huawei)"
+VDFPcuiDesc = "Vodafone Mobile Broadband Secondary Port Modem (Huawei)"
+VDFBTDesc = "Vodafone Mobile Broadband Bluetooth Interface (Huawei)"
+VDFCtrlDesc = "Vodafone Mobile Broadband Control Interface (Huawei)"
+VDFPCVoiceDesc = "Vodafone Mobile Broadband 3G PC Voice Interface (Huawei)"
+VDFGPSDesc = "Vodafone Mobile Broadband NMEA Port (Huawei)"
+VDFFingerPrint = "Vodafone Mobile Broadband Fingerprint (Huawei)"
+
+HP3110PCUIDeviceDesc = "HP hs3110 HSPA+ Mobile Broadband Module PC UI"
+HP3110DIAGDeviceDesc = "HP hs3110 HSPA+ Mobile Broadband Module Application"
+HP3110GNSSDeviceDesc = "HP hs3110 HSPA+ Mobile Broadband Module NMEA"
+HP3114PCUIDeviceDesc = "HP hs3114 HSPA+ Mobile Broadband Module PC UI"
+HP3114DIAGDeviceDesc = "HP hs3114 HSPA+ Mobile Broadband Module Application"
+HP3114GNSSDeviceDesc = "HP hs3114 HSPA+ Mobile Broadband Module NMEA"
+
+Mfg = "HUAWEI Technologies CO.,LTD"
+Disk_Description = "Huawei Driver Installation Disk"
+ServiceName = "huawei_cdcacm"
+

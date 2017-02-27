@@ -1,0 +1,543 @@
+; HUAWEI Virtual Ethernet Adapter Setup File
+; Copyright (c) 2010-2013 Huawei Incorporated
+; Manufacturer: Huawei Incorporated
+;
+; This INF file installs a Virtual Ethernet Adapter.
+; old sys name: ewusbnet.sys
+
+[version]
+Signature   = "$Windows NT$"
+Class       = Net
+ClassGUID   = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider    = %HUAWEI%
+DriverVer   = 03/27/2014,6.0.1.335
+Catalogfile = ewusbwwan.cat
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[SourceDisksNames]
+  1000 = %HWSRCDISK%,"",,
+
+[SourceDisksFiles]
+  ewusbwwan.sys = 1000
+
+[Manufacturer]
+%HUAWEI% = QCOM, NTia64, NTamd64
+
+[QCOM]
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1401&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1402&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1403&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1405&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1408&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1409&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1413&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1415&MI_00
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1416&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1417&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1418&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1419&MI_05
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_141C&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_141D&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_141F&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1421&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1422&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_140C&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14AC&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_140E&MI_00
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1427&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1428&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1429&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142A&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1404&MI_05
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1407&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142C&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142D&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142E&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1430&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1431&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1432&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142F&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1433&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1434&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1435&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1436&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1437&MI_00
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1438&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1439&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143A&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143B&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143E&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_144B&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_144D&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143F&MI_05
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14D0&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14D2&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14D4&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1510&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1511&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1512&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1514&MI_01
+%qcwwan.DeviceDesc01%    = qcwwan.ndi, USB\VID_12d1&PID_1515&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1516&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1517&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1518&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_07
+%qcwwan.DeviceDesc01%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_11
+%qcwwan.DeviceDesc03%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_16
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_67
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_76
+
+
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1464&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1465&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1466&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1467&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1468&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1469&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146A&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146B&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146C&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146D&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146E&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146F&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1470&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1471&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1472&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1473&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1474&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1475&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1476&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1477&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1478&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1479&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147A&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147B&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147C&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147D&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147E&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147F&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1480&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1481&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1482&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1483&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1484&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1485&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1486&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1487&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1488&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1489&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148A&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148B&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148C&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148D&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148E&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148F&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1490&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1491&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1492&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1493&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1494&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1495&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1496&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1497&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1498&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1499&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149A&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149B&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149C&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149D&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149E&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149F&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A0&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A1&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A2&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A3&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A4&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14B8&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_37
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_46
+
+
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&PID_14AA&MI_01
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&PID_14AB&MI_01
+
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_15FF&MI_01
+
+; for logo test
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_15E4&MI_00
+
+[QCOM.NTia64]
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1401&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1402&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1403&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1405&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1408&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1409&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1413&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1415&MI_00
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1416&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1417&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1418&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1419&MI_05
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_141C&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_141D&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_141F&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1421&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1422&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_140C&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14AC&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_140E&MI_00
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1427&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1428&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1429&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142A&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1404&MI_05
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1407&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142C&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142D&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142E&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1430&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1431&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1432&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142F&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1433&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1434&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1435&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1436&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1437&MI_00
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1438&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1439&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143A&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143B&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143E&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_144B&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_144D&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143F&MI_05
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14D0&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14D2&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14D4&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1510&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1511&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1512&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1514&MI_01
+%qcwwan.DeviceDesc01%    = qcwwan.ndi, USB\VID_12d1&PID_1515&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1516&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1517&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1518&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_07
+%qcwwan.DeviceDesc01%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_11
+%qcwwan.DeviceDesc03%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_16
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_67
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_76
+
+
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1464&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1465&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1466&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1467&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1468&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1469&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146A&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146B&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146C&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146D&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146E&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146F&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1470&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1471&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1472&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1473&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1474&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1475&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1476&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1477&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1478&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1479&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147A&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147B&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147C&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147D&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147E&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147F&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1480&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1481&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1482&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1483&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1484&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1485&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1486&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1487&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1488&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1489&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148A&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148B&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148C&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148D&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148E&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148F&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1490&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1491&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1492&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1493&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1494&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1495&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1496&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1497&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1498&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1499&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149A&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149B&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149C&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149D&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149E&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149F&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A0&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A1&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A2&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A3&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A4&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14B8&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_37
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_46
+
+
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&PID_14AA&MI_01
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&PID_14AB&MI_01
+
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_15FF&MI_01
+
+; for logo test
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_15E4&MI_00
+
+[QCOM.NTamd64]
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1401&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1402&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1403&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1405&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1408&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1409&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1413&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1415&MI_00
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1416&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1417&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1418&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1419&MI_05
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_141C&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_141D&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_141F&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1421&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1422&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_140C&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14AC&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_140E&MI_00
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1427&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1428&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1429&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142A&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1404&MI_05
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1407&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142C&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142D&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142E&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1430&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1431&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1432&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_142F&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1433&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1434&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1435&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1436&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1437&MI_00
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1438&MI_04
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1439&MI_06
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143A&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143B&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143E&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_144B&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_144D&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_143F&MI_05
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14D0&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14D2&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_14D4&MI_02
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1510&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1511&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1512&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1514&MI_01
+%qcwwan.DeviceDesc01%    = qcwwan.ndi, USB\VID_12d1&PID_1515&MI_03
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1516&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1517&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_1518&MI_01
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_07
+%qcwwan.DeviceDesc01%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_11
+%qcwwan.DeviceDesc03%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_16
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_67
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_76
+
+
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1464&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1465&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1466&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1467&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1468&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1469&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146A&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146B&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146C&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146D&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146E&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_146F&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1470&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1471&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1472&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1473&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1474&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1475&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1476&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1477&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1478&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1479&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147A&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147B&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147C&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147D&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147E&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_147F&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1480&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1481&MI_01
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1482&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1483&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1484&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1485&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1486&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1487&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1488&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1489&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148A&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148B&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148C&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148D&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148E&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_148F&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1490&MI_05
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1491&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1492&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1493&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1494&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1495&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1496&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1497&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1498&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_1499&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149A&MI_03
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149B&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149C&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149D&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149E&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_149F&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A0&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A1&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A2&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A3&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14A4&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&PID_14B8&MI_02
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_37
+%qcwwan.VDF%    = qcwwan.ndi, USB\VID_12d1&Subclass_01&Prot_46
+
+
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&PID_14AA&MI_01
+%qcwwan.DeviceDesc02%    = qcwwan.ndi, USB\VID_12d1&PID_14AB&MI_01
+
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_15FF&MI_01
+
+; for logo test
+%qcwwan.DeviceDesc00%    = qcwwan.ndi, USB\VID_12d1&PID_15E4&MI_00
+
+;-------------------------------------------------------------------------------
+; Virtual Ethernet Adapter
+;
+[qcwwan.ndi]
+Characteristics = 0x4 ; NCF_PHYSICAL
+BusType         = 15  ; PNPBus
+
+AddReg          = qcwwan.Reg
+CopyFiles       = qcwwan.CopyFiles
+*IfType         = 00000243      ; IF_TPYE_WWANPP.
+*MediaType      = 00000009      ; NdisMediumWirelessWan
+;*MediaType      = 00000000      ; NdisMedium802_3
+*physicalMediaType = 00000008   ; NdisPhysicalMediumWirelessWan
+EnableDhcp      = 00000000      ; Disable DHCP
+
+[qcwwan.ndi.Services]
+AddService      = ewusbmbb, 2, qcwwan.Service, qcwwan.EventLog
+
+;-----------------------------------------------------------------------------
+; Virtual Miniport Common
+;
+[qcwwan.Reg]
+HKR,    ,                         BusNumber,           0, "0" 
+HKR,    ,                         EnableDhcp,          0x00010001, 0x00000000       ;Disable DHCP
+HKR,    ,                         MPRadioState,        0x00010001, 0x00000001       ;RadioState
+HKR, Ndi,                         Service,             0, "ewusbmbb"
+HKR, Ndi\Interfaces,              UpperRange,          0, "flpp4" and "flpp6"
+HKR, Ndi\Interfaces,              LowerRange,          0, "ppip"
+; HKR, Ndi\params\VlanID,     ParamDesc,       0, %VlanID%
+; HKR, Ndi\params\VlanID,     default,         0, "777"
+; HKR, Ndi\params\VlanID,     type,            0, "long"
+; HKR, Ndi\params\VlanID,     min,             0, "0"
+; HKR, Ndi\params\VlanID,     max,             0, "4095"
+; HKR, Ndi\params\VlanID,     step,            0, "1"
+; HKR, Ndi\params\VlanID,     base,            0, "10"
+
+;-----------------------------------------------------------------------------
+; Driver and Service Section
+;
+[qcwwan.CopyFiles]
+ewusbwwan.sys,,,2
+
+[qcwwan.Service]
+DisplayName     = %qcwwan.Service.DispName%
+ServiceType     = 1 ;%SERVICE_KERNEL_DRIVER%
+StartType       = 3 ;%SERVICE_DEMAND_START%
+ErrorControl    = 1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary   = %12%\ewusbwwan.sys
+LoadOrderGroup  = NDIS
+AddReg          = TextModeFlags.Reg
+
+[qcwwan.EventLog]
+AddReg = qcwwan.AddEventLog.Reg
+
+[qcwwan.AddEventLog.Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported,   0x00010001, 7
+
+[TextModeFlags.Reg]
+HKR, , TextModeFlags,    0x00010001, 0x0001
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+ewusbwwan.sys  = 1,,
+
+;-----------------------------------------------------------------------------
+; DestinationDirs
+;
+[DestinationDirs]
+qcwwan.CopyFiles = 12
+
+;-----------------------------------------------------------------------------
+; Localizable Strings
+;
+[Strings]
+HWSRCDISK = "HUAWEI Multimedia USB Driver Disk"
+HUAWEI   = "HUAWEI Incorporated"
+qcwwan.DeviceDesc00         = "HUAWEI Mobile Connect - 3G Network Card"
+qcwwan.DeviceDesc01         = "HUAWEI Mobile Connect - Network Card"
+qcwwan.DeviceDesc02         = "Mobile Connect - Network Card"
+qcwwan.DeviceDesc03         = "HUAWEI Mobile Connect - Network Adapter"
+qcwwan.VDF	            = "Vodafone Mobile Broadband Network Adapter (Huawei)"
+qcwwan.Service.DispName     = "HUAWEI USB-WWAN miniport"
+DiskId1 = "HUAWEI USB-NDIS Miniport Device Installation Disk #1"
+

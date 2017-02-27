@@ -1,0 +1,89 @@
+;
+; HWGPSSensor.inf
+;
+
+[Version]
+Signature	= "$Windows NT$"
+Class		= Sensor
+ClassGuid	= {5175D334-C371-4806-B3BA-71FD53C9258D}
+;Provider	= %MSFT%
+Provider	= "Huawei Technologies"
+CatalogFile	= hwgpssensor.cat
+DriverVer=02/04/2010,6.0.3.0
+
+; =================== Manufacturer/Models sections =======================
+
+[Manufacturer]
+%MSFT%                      = Huawei,NTx86
+
+[Huawei.NTx86]
+%HWGPSSensor.DeviceDesc% = HWGPSSensor_Install,sensors\hwgpssensor
+;%HWGPSSensor.DeviceDesc% = HWGPSSensor_Install, USB\VID_12d1&PID_1404&MI_01
+
+; =================== Huawei GPS Device ==================================
+
+[HWGPSSensor_Install.NT]
+CopyFiles       = UMDriverCopy
+AddProperty     = DriverPropertiesSection
+
+[HWGPSSensor_Install.NT.hw]
+
+
+[HWGPSSensor_Install.NT.Services]
+AddService      = WUDFRd,0x000001fa,WUDFRD_ServiceInstall
+
+[HWGPSSensor_Install.NT.CoInstallers]
+AddReg          = WUDF_CoInstallers_AddReg
+
+[HWGPSSensor_Install.NT.Wdf]
+UmdfService             = hwgpssensor,UMDFHWGPSSensor_Install
+UmdfServiceOrder        = hwgpssensor
+UmdfImpersonationLevel  = Impersonation
+
+; =================== UMDF Service Install section ===================
+
+[UMDFHWGPSSensor_Install]
+UmdfLibraryVersion      = 1.9.0
+ServiceBinary           = %12%\UMDF\hwgpssensor.dll
+DriverCLSID             = {3C4C959E-4521-4d59-9704-0B43C8A47EB6}
+
+[WUDFRD_ServiceInstall]
+DisplayName     = %WudfRdDisplayName%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WUDFRd.sys
+LoadOrderGroup  = Base
+
+[SourceDisksFiles]
+hwgpssensor.dll  = 1
+
+[SourceDisksNames]
+1 = %MediaDescription%
+
+
+[WUDF_CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WUDFCoinstaller.dll"
+
+[DestinationDirs]
+UMDriverCopy            = 12,UMDF
+CoInstallers_CopyFiles  = 11
+
+; 2010-01-07 Deepak_d71524, To fix A56D15050:
+[UMDriverCopy]
+hwgpssensor.dll
+
+; =================== Driver Property section ===================
+
+[DriverPropertiesSection]
+DeviceIcon,,,,"%12%\UMDF\hwgpssensor.dll,-1000"
+
+; =================== Generic ==================================
+
+[Strings]
+MSFT                        = "Huawei Technologies"
+MediaDescription            = "Huawei GPS Sesnor Driver Installation Media"
+ClassName                   = "HWGPSSensorDriver"
+WudfRdDisplayName           = "Windows Driver Foundation - User-mode Driver Framework Reflector"
+HWGPSSensor.DeviceDesc   	= "Huawei GPS Sensor"
+
